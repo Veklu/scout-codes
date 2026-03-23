@@ -17,6 +17,29 @@ add_action('plugins_loaded', function () {
     load_plugin_textdomain('scout-codes', false, dirname(plugin_basename(__FILE__)) . '/languages');
 });
 
+// Reload textdomain for user locale in admin
+add_filter('locale', function ($locale) {
+    if (is_admin() && function_exists('wp_get_current_user')) {
+        $user = wp_get_current_user();
+        if ($user->exists()) {
+            $user_locale = get_user_meta($user->ID, 'locale', true);
+            if ($user_locale) {
+                static $loaded = false;
+                if (!$loaded) {
+                    $loaded = true;
+                    $mofile = SCOUT_CODES_DIR . 'languages/scout-codes-' . $user_locale . '.mo';
+                    if (file_exists($mofile)) {
+                        unload_textdomain('scout-codes');
+                        load_textdomain('scout-codes', $mofile);
+                    }
+                }
+                return $user_locale;
+            }
+        }
+    }
+    return $locale;
+});
+
 // ═══════════ CODE DEFINITIONS ═══════════
 function scout_codes_get_all() {
     return [
