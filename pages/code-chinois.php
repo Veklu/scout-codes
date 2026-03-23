@@ -53,28 +53,28 @@ body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--txt)}
 <div class="container">
 
 <div class="card">
-  <h2>Comment ça marche?</h2>
-  <p class="desc">Le Code Chinois est <strong>l'inverse du Code des Samouraïs</strong>. On commence la lecture par les traits <strong>horizontaux</strong> (qui représentent la voyelle), puis les traits <strong>verticaux</strong> (qui avancent dans l'alphabet).</p>
+  <h2><?php esc_html_e('Comment ça marche?', 'scout-codes'); ?></h2>
+  <p class="desc"><?php echo wp_kses(__('Le Code Chinois est <strong>l\'inverse du Code des Samouraïs</strong>. On commence la lecture par les traits <strong>horizontaux</strong> (qui représentent la voyelle), puis les traits <strong>verticaux</strong> (qui avancent dans l\'alphabet).', 'scout-codes'), ['strong' => []]); ?></p>
 
   <div class="legend">
-    <strong>Voyelles = traits horizontaux :</strong> A=1H, E=2H, I=3H, O=4H, U=5H, Y=6H<br>
-    <strong>Consonnes = voyelle horizontale + traits verticaux</strong><br>
-    <strong>Séparateurs :</strong> \ sépare les mots · \\ sépare les phrases<br><br>
-    ⚠️ Attention: c'est <strong>exactement l'inverse</strong> du Samouraï!
+    <strong><?php esc_html_e('Voyelles = traits horizontaux :', 'scout-codes'); ?></strong> A=1H, E=2H, I=3H, O=4H, U=5H, Y=6H<br>
+    <strong><?php esc_html_e('Consonnes = voyelle horizontale + traits verticaux', 'scout-codes'); ?></strong><br>
+    <strong><?php esc_html_e('Séparateurs :', 'scout-codes'); ?></strong> <?php esc_html_e('\ sépare les mots · \\\\ sépare les phrases', 'scout-codes'); ?><br><br>
+    ⚠️ <?php echo wp_kses(__('Attention: c\'est <strong>exactement l\'inverse</strong> du Samouraï!', 'scout-codes'), ['strong' => []]); ?>
   </div>
 
   <!-- Comparison -->
   <div class="vs-box">
     <div class="side">
-      <h4>SAMOURAÏ</h4>
-      <p style="font-size:13px;color:var(--soft)">Verticaux d'abord → Horizontaux</p>
+      <h4><?php esc_html_e('SAMOURAÏ', 'scout-codes'); ?></h4>
+      <p style="font-size:13px;color:var(--soft)"><?php esc_html_e('Verticaux d\'abord → Horizontaux', 'scout-codes'); ?></p>
       <div id="samC" style="margin-top:8px"></div>
       <div style="font-size:11px;color:var(--muted)">C = 1V+2H</div>
     </div>
     <div class="vs">VS</div>
     <div class="side">
-      <h4>CHINOIS</h4>
-      <p style="font-size:13px;color:var(--soft)">Horizontaux d'abord → Verticaux</p>
+      <h4><?php esc_html_e('CHINOIS', 'scout-codes'); ?></h4>
+      <p style="font-size:13px;color:var(--soft)"><?php esc_html_e('Horizontaux d\'abord → Verticaux', 'scout-codes'); ?></p>
       <div id="chiC" style="margin-top:8px"></div>
       <div style="font-size:11px;color:var(--muted)">C = 1H+2V</div>
     </div>
@@ -83,36 +83,43 @@ body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--txt)}
   <div class="alpha-grid" id="alphaGrid"></div>
 
   <div class="example">
-    <strong>Séparateurs</strong><br>
-    Utilisez <strong>\</strong> pour séparer les mots et <strong>\\</strong> pour séparer les phrases.
+    <strong><?php esc_html_e('Séparateurs', 'scout-codes'); ?></strong><br>
+    <?php echo wp_kses(__('Utilisez <strong>\\</strong> pour séparer les mots et <strong>\\\\</strong> pour séparer les phrases.', 'scout-codes'), ['strong' => []]); ?>
   </div>
 </div>
 
 <!-- ENCODER -->
 <div class="card">
-  <h2>✏️ Encodeur / Décodeur</h2>
+  <h2>✏️ <?php esc_html_e('Encodeur / Décodeur', 'scout-codes'); ?></h2>
 
   <div class="dir-toggle">
-    <button class="active" onclick="setDir('encode',this)">Texte → Chinois</button>
-    <button onclick="setDir('decode',this)">Chinois → Texte</button>
+    <button class="active" onclick="setDir('encode',this)"><?php esc_html_e('Texte → Chinois', 'scout-codes'); ?></button>
+    <button onclick="setDir('decode',this)"><?php esc_html_e('Chinois → Texte', 'scout-codes'); ?></button>
   </div>
 
   <div class="encoder-input">
-    <textarea id="inputText" placeholder="Tapez votre message ici..." oninput="convert()"></textarea>
+    <textarea id="inputText" placeholder="<?php echo esc_attr__('Tapez votre message ici...', 'scout-codes'); ?>" oninput="convert()"></textarea>
   </div>
   <div class="btn-row">
-    <button class="btn btn-r" onclick="convert()">Convertir</button>
-    <button class="btn btn-o" onclick="clearAll()">Effacer</button>
-    <button class="btn btn-o" onclick="downloadSVG()">📥 SVG</button>
+    <button class="btn btn-r" onclick="convert()"><?php esc_html_e('Convertir', 'scout-codes'); ?></button>
+    <button class="btn btn-o" onclick="clearAll()"><?php esc_html_e('Effacer', 'scout-codes'); ?></button>
+    <button class="btn btn-o" onclick="downloadSVG()">📥 <?php esc_html_e('SVG', 'scout-codes'); ?></button>
   </div>
 
-  <div class="output-label" id="outLabel">SYMBOLES CHINOIS</div>
-  <div class="output-area" id="output"><div class="placeholder">Votre message apparaîtra ici...</div></div>
+  <div class="output-label" id="outLabel"><?php esc_html_e('SYMBOLES CHINOIS', 'scout-codes'); ?></div>
+  <div class="output-area" id="output"><div class="placeholder"><?php esc_html_e('Votre message apparaîtra ici...', 'scout-codes'); ?></div></div>
 </div>
 </div>
 
 
 
+<script>var scL10n = <?php echo wp_json_encode([
+  'tapezMessage' => __('Tapez votre message ici...', 'scout-codes'),
+  'entrezCode' => __('Entrez le code (ex: 1H+2V 2H+3V) séparé par espaces...', 'scout-codes'),
+  'symbolesChinois' => __('SYMBOLES CHINOIS', 'scout-codes'),
+  'texte' => __('TEXTE', 'scout-codes'),
+  'messageApparaitra' => __('Votre message apparaîtra ici...', 'scout-codes'),
+]); ?>;</script>
 <script>
 // Chinois: INVERSE of Samouraï
 // H = vowel group, V = offset (consonant position)
@@ -205,15 +212,15 @@ function setDir(d, btn) {
   dir = d;
   document.querySelectorAll('.dir-toggle button').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
-  document.getElementById('inputText').placeholder = d === 'encode' ? 'Tapez votre message ici...' : 'Entrez le code (ex: 1H+2V 2H+3V) séparé par espaces...';
-  document.getElementById('outLabel').textContent = d === 'encode' ? 'SYMBOLES CHINOIS' : 'TEXTE';
+  document.getElementById('inputText').placeholder = d === 'encode' ? scL10n.tapezMessage : scL10n.entrezCode;
+  document.getElementById('outLabel').textContent = d === 'encode' ? scL10n.symbolesChinois : scL10n.texte;
   convert();
 }
 
 function convert() {
   const input = document.getElementById('inputText').value;
   const o = document.getElementById('output');
-  if (!input.trim()) { o.innerHTML = '<div class="placeholder">Votre message apparaîtra ici...</div>'; o.classList.remove('active'); return; }
+  if (!input.trim()) { o.innerHTML = '<div class="placeholder">' + scL10n.messageApparaitra + '</div>'; o.classList.remove('active'); return; }
   o.classList.add('active');
 
   if (dir === 'encode') {
@@ -240,7 +247,7 @@ function convert() {
   }
 }
 
-function clearAll() { document.getElementById('inputText').value = ''; const o = document.getElementById('output'); o.innerHTML = '<div class="placeholder">Votre message apparaîtra ici...</div>'; o.classList.remove('active'); }
+function clearAll() { document.getElementById('inputText').value = ''; const o = document.getElementById('output'); o.innerHTML = '<div class="placeholder">' + scL10n.messageApparaitra + '</div>'; o.classList.remove('active'); }
 
 function downloadSVG() {
   const svgs = document.getElementById('output').querySelectorAll('svg');

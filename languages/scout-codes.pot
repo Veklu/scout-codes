@@ -1,0 +1,1927 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Scout Codes package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Scout Codes 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-23 10:10-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: includes/fun-facts.php:15 includes/fun-facts.php:125
+msgid "États-Unis"
+msgstr ""
+
+#: includes/fun-facts.php:17
+msgid ""
+"Autoportrait par Samuel Morse, vers 1812. National Portrait Gallery, "
+"Smithsonian. Domaine public."
+msgstr ""
+
+#: includes/fun-facts.php:19
+msgid ""
+"Imagine que tu veux envoyer un message à ton ami, mais tu ne peux utiliser "
+"qu'un seul bouton — appuyer court ou appuyer long. C'est exactement comme ça "
+"que fonctionne le code Morse! Chaque lettre est un mélange de « bips » "
+"courts (les points) et de « biiips » longs (les traits)."
+msgstr ""
+
+#: includes/fun-facts.php:21
+msgid ""
+"Le premier message en code Morse a été envoyé le 24 mai 1844 entre "
+"Washington et Baltimore — 60 km! Le message disait « What hath God "
+"wrought! » (Qu'est-ce que Dieu a fait!)."
+msgstr ""
+
+#: includes/fun-facts.php:22
+msgid ""
+"Avant d'inventer le télégraphe, Samuel Morse était peintre! Il a peint des "
+"tableaux pour des présidents américains."
+msgstr ""
+
+#: includes/fun-facts.php:23
+msgid ""
+"Le SOS (··· ——— ···) est devenu le signal de détresse international en 1906. "
+"Le Titanic l'a utilisé en 1912."
+msgstr ""
+
+#: includes/fun-facts.php:24
+msgid ""
+"Le code Morse est encore utilisé aujourd'hui! Les radioamateurs et certains "
+"pilotes l'utilisent pour communiquer."
+msgstr ""
+
+#: includes/fun-facts.php:25
+msgid ""
+"Les scouts apprennent le Morse pour communiquer à distance avec des lampes "
+"de poche, des sifflets ou en frappant sur des objets."
+msgstr ""
+
+#: includes/fun-facts.php:28
+msgid "Code Morse — Wikipédia"
+msgstr ""
+
+#: includes/fun-facts.php:29
+msgid "Samuel Morse — Wikipédia"
+msgstr ""
+
+#: includes/fun-facts.php:30
+msgid "Apprendre le Morse (jeu)"
+msgstr ""
+
+#: includes/fun-facts.php:38 includes/fun-facts.php:82
+msgid "France"
+msgstr ""
+
+#: includes/fun-facts.php:40
+msgid ""
+"Portrait de Louis Braille, basé sur un daguerréotype posthume. Domaine "
+"public."
+msgstr ""
+
+#: includes/fun-facts.php:42
+msgid ""
+"Louis Braille est devenu aveugle à 3 ans après un accident dans l'atelier de "
+"son papa (qui fabriquait des selles pour chevaux). Mais ça ne l'a pas "
+"arrêté! À seulement 15 ans, il a inventé un système génial : 6 petits points "
+"en relief que tu peux toucher avec tes doigts pour lire sans les yeux."
+msgstr ""
+
+#: includes/fun-facts.php:44
+msgid ""
+"Louis avait seulement 15 ans quand il a inventé son système! C'est comme si "
+"un élève de secondaire 3 changeait le monde."
+msgstr ""
+
+#: includes/fun-facts.php:45
+msgid ""
+"Le braille ne sert pas qu'à lire — il existe aussi un braille musical pour "
+"les musiciens aveugles!"
+msgstr ""
+
+#: includes/fun-facts.php:46
+msgid ""
+"Louis Braille est enterré au Panthéon à Paris, avec les plus grands héros de "
+"la France."
+msgstr ""
+
+#: includes/fun-facts.php:47
+msgid ""
+"Le braille est utilisé dans presque toutes les langues du monde, même le "
+"chinois et l'arabe!"
+msgstr ""
+
+#: includes/fun-facts.php:48
+msgid ""
+"Aujourd'hui, les téléphones et ordinateurs peuvent convertir du texte en "
+"braille grâce à des « plages braille » — des appareils avec des picots qui "
+"montent et descendent."
+msgstr ""
+
+#: includes/fun-facts.php:51
+msgid "Louis Braille — Wikipédia"
+msgstr ""
+
+#: includes/fun-facts.php:52
+msgid "Braille — Wikipédia"
+msgstr ""
+
+#: includes/fun-facts.php:53
+msgid "Maison Louis Braille (musée)"
+msgstr ""
+
+#: includes/fun-facts.php:59
+msgid "Les Francs-maçons"
+msgstr ""
+
+#: includes/fun-facts.php:60
+msgid "XVIIIe siècle"
+msgstr ""
+
+#: includes/fun-facts.php:61
+msgid "Europe"
+msgstr ""
+
+#: includes/fun-facts.php:63
+msgid "Grille du chiffre Pigpen. Wikimedia Commons, domaine public."
+msgstr ""
+
+#: includes/fun-facts.php:65
+msgid ""
+"Tu connais le jeu de tic-tac-toe (morpion)? Et bien imagine que tu caches "
+"des lettres dans chaque case de la grille! C'est exactement ce que faisaient "
+"les Francs-maçons (une société secrète) il y a 300 ans pour écrire des "
+"messages que personne d'autre ne pouvait lire."
+msgstr ""
+
+#: includes/fun-facts.php:67
+msgid ""
+"On a retrouvé ce code gravé sur des pierres tombales de Francs-maçons dans "
+"des cimetières!"
+msgstr ""
+
+#: includes/fun-facts.php:68
+msgid ""
+"En anglais, ce code s'appelle « Pigpen cipher » (le code du poulailler) "
+"parce que les formes ressemblent à des enclos pour cochons."
+msgstr ""
+
+#: includes/fun-facts.php:69
+msgid ""
+"C'est un des codes les plus faciles à apprendre — en 5 minutes tu peux "
+"écrire des messages secrets!"
+msgstr ""
+
+#: includes/fun-facts.php:70
+msgid ""
+"Les espions et les pirates utilisaient des codes similaires pour cacher "
+"leurs trésors."
+msgstr ""
+
+#: includes/fun-facts.php:73
+msgid "Chiffre Pigpen — Wikipédia"
+msgstr ""
+
+#: includes/fun-facts.php:74
+msgid "Franc-maçonnerie — Vikidia (pour les jeunes)"
+msgstr ""
+
+#: includes/fun-facts.php:84
+msgid ""
+"Portrait de Claude Chappe, inventeur du télégraphe optique. Domaine public."
+msgstr ""
+
+#: includes/fun-facts.php:86
+msgid ""
+"Avant les téléphones et Internet, comment envoyer un message très loin et "
+"très vite? Avec des drapeaux! En bougeant tes deux bras dans différentes "
+"positions, tu peux « dire » chaque lettre de l'alphabet. Les marins sur les "
+"bateaux utilisent encore ce système aujourd'hui!"
+msgstr ""
+
+#: includes/fun-facts.php:88
+msgid ""
+"La marine britannique utilisait le sémaphore pour communiquer entre bateaux "
+"— jusqu'à 7 km de distance avec des jumelles!"
+msgstr ""
+
+#: includes/fun-facts.php:89
+msgid ""
+"Le système de Claude Chappe pouvait envoyer un message de Paris à Lyon (450 "
+"km) en seulement 2 minutes!"
+msgstr ""
+
+#: includes/fun-facts.php:90
+msgid ""
+"Un bon signaleur peut transmettre 8 mots par minute — c'est comme texter "
+"avec les bras!"
+msgstr ""
+
+#: includes/fun-facts.php:91
+msgid ""
+"Les scouts pratiquent le sémaphore pour communiquer entre deux collines ou "
+"deux rives d'un lac."
+msgstr ""
+
+#: includes/fun-facts.php:94
+msgid "Sémaphore — Wikipédia"
+msgstr ""
+
+#: includes/fun-facts.php:95
+msgid "Claude Chappe — Wikipédia"
+msgstr ""
+
+#: includes/fun-facts.php:96
+msgid "Alphabet grec — Vikidia"
+msgstr ""
+
+#: includes/fun-facts.php:102
+msgid "Jules César"
+msgstr ""
+
+#: includes/fun-facts.php:103
+msgid "100 av. J.-C. – 44 av. J.-C."
+msgstr ""
+
+#: includes/fun-facts.php:104
+msgid "Empire romain"
+msgstr ""
+
+#: includes/fun-facts.php:106
+msgid "Buste de Jules César, musée Pouchkine. Domaine public."
+msgstr ""
+
+#: includes/fun-facts.php:108
+msgid ""
+"Jules César était un général romain super puissant. Pour envoyer des ordres "
+"secrets à ses soldats, il a eu une idée simple mais brillante : remplacer "
+"chaque lettre par celle qui est 3 places plus loin dans l'alphabet! Donc A "
+"devient D, B devient E, et ainsi de suite. Simple, mais personne ne le "
+"savait à l'époque!"
+msgstr ""
+
+#: includes/fun-facts.php:110
+msgid ""
+"Jules César utilisait toujours un décalage de 3, mais tu peux utiliser "
+"n'importe quel nombre de 1 à 25!"
+msgstr ""
+
+#: includes/fun-facts.php:111
+msgid ""
+"Il y a 2000 ans, ce code était presque impossible à casser. Aujourd'hui, un "
+"ordinateur peut le casser en moins d'une seconde!"
+msgstr ""
+
+#: includes/fun-facts.php:112
+msgid ""
+"Le code de César est la base de presque tous les codes secrets modernes — "
+"même ceux des banques et d'Internet!"
+msgstr ""
+
+#: includes/fun-facts.php:113
+msgid ""
+"Auguste, le neveu de César, utilisait un décalage de 1 seulement (A→B). Pas "
+"très sécuritaire!"
+msgstr ""
+
+#: includes/fun-facts.php:116
+msgid "Chiffre de César — Wikipédia"
+msgstr ""
+
+#: includes/fun-facts.php:117
+msgid "Jules César — Vikidia"
+msgstr ""
+
+#: includes/fun-facts.php:118 includes/fun-facts.php:210
+msgid "Cryptographie — Vikidia"
+msgstr ""
+
+#: includes/fun-facts.php:123
+msgid "Bob Bemer (comité ASCII)"
+msgstr ""
+
+#: includes/fun-facts.php:126
+msgid ""
+"Les ordinateurs ne comprennent que deux choses : allumé (1) et éteint (0). "
+"C'est comme un interrupteur! Alors comment leur faire comprendre des "
+"lettres? En les transformant en suites de 0 et de 1! Chaque lettre a son "
+"propre « numéro binaire ». Par exemple, A = 01000001."
+msgstr ""
+
+#: includes/fun-facts.php:128
+msgid ""
+"Un bit c'est un seul 0 ou 1. Il en faut 8 (un octet) pour faire une lettre — "
+"c'est comme un mot de passe à 8 chiffres, mais avec seulement des 0 et des 1!"
+msgstr ""
+
+#: includes/fun-facts.php:129
+msgid ""
+"Le mot « BONJOUR » en binaire prend 56 bits (7 lettres × 8 bits). Ton nom "
+"prend encore plus!"
+msgstr ""
+
+#: includes/fun-facts.php:130
+msgid ""
+"Chaque seconde, ton ordinateur traite des milliards de 0 et de 1. C'est "
+"comme si tu lisais des millions de livres en un clin d'oeil!"
+msgstr ""
+
+#: includes/fun-facts.php:131
+msgid ""
+"Les emojis aussi ont un code binaire! Le smiley 😀 c'est 11110000 10011111 "
+"10011000 10000000."
+msgstr ""
+
+#: includes/fun-facts.php:134
+msgid "ASCII — Wikipédia"
+msgstr ""
+
+#: includes/fun-facts.php:135
+msgid "Système binaire — Vikidia"
+msgstr ""
+
+#: includes/fun-facts.php:143
+msgid "Écosse / Canada / É.-U."
+msgstr ""
+
+#: includes/fun-facts.php:145
+msgid ""
+"Alexander Graham Bell avec un téléphone, vers 1876. Domaine public, Library "
+"of Congress."
+msgstr ""
+
+#: includes/fun-facts.php:147
+msgid ""
+"Regarde les touches de ton téléphone : sous chaque chiffre, il y a des "
+"lettres! Le 2 = ABC, le 3 = DEF, etc. Avant les écrans tactiles, on appuyait "
+"plusieurs fois sur une touche pour choisir la lettre. C'est comme ça qu'est "
+"né un code secret basé sur les numéros de téléphone!"
+msgstr ""
+
+#: includes/fun-facts.php:149
+msgid ""
+"Avant les smartphones, envoyer un texto prenait une éternité : pour écrire "
+"« SALUT », il fallait appuyer 13 fois sur les touches!"
+msgstr ""
+
+#: includes/fun-facts.php:150
+msgid ""
+"Alexander Graham Bell, l'inventeur du téléphone, a vécu à Brantford en "
+"Ontario! Le Canada est le berceau du téléphone."
+msgstr ""
+
+#: includes/fun-facts.php:151
+msgid ""
+"Le premier appel téléphonique a été fait le 10 mars 1876. Bell a dit : « Mr. "
+"Watson, venez ici, je veux vous voir. »"
+msgstr ""
+
+#: includes/fun-facts.php:152
+msgid ""
+"Le code téléphone est utilisé partout : les codes postaux, les mots de passe "
+"Wi-Fi (quand c'est un numéro de téléphone!), et même les plaques "
+"d'immatriculation."
+msgstr ""
+
+#: includes/fun-facts.php:155
+msgid "Clavier téléphonique — Wikipédia"
+msgstr ""
+
+#: includes/fun-facts.php:156
+msgid "Alexander Graham Bell — Vikidia"
+msgstr ""
+
+#: includes/fun-facts.php:161
+msgid ""
+"Les samouraïs étaient des guerriers japonais super entraînés qui suivaient "
+"un code d'honneur appelé « bushido ». Ils utilisaient des symboles secrets "
+"pour communiquer entre eux. Ce code scout s'inspire de leurs techniques!"
+msgstr ""
+
+#: includes/fun-facts.php:163
+msgid ""
+"Les samouraïs s'entraînaient dès l'âge de 5 ans — comme l'âge des Castors!"
+msgstr ""
+
+#: includes/fun-facts.php:164
+msgid ""
+"Le Japon a eu des samouraïs pendant presque 700 ans (du XIIe au XIXe siècle)."
+msgstr ""
+
+#: includes/fun-facts.php:165
+msgid ""
+"Les samouraïs devaient aussi savoir lire, écrire et peindre — pas juste se "
+"battre!"
+msgstr ""
+
+#: includes/fun-facts.php:166
+msgid "Le mot « samouraï » veut dire « celui qui sert » en japonais."
+msgstr ""
+
+#: includes/fun-facts.php:169
+msgid "Samouraï — Vikidia"
+msgstr ""
+
+#: includes/fun-facts.php:170
+msgid "Bushido — Wikipédia"
+msgstr ""
+
+#: includes/fun-facts.php:175
+msgid ""
+"L'écriture chinoise est une des plus vieilles du monde — plus de 3000 ans! "
+"Chaque « caractère » est comme un petit dessin. Ce code scout utilise le "
+"nombre de traits dans les caractères pour cacher des messages."
+msgstr ""
+
+#: includes/fun-facts.php:177
+msgid ""
+"Il existe plus de 50 000 caractères chinois, mais un élève en apprend "
+"environ 3 000 à l'école."
+msgstr ""
+
+#: includes/fun-facts.php:178
+msgid ""
+"L'écriture chinoise se fait traditionnellement avec un pinceau et de l'encre "
+"— c'est un art appelé calligraphie."
+msgstr ""
+
+#: includes/fun-facts.php:179
+msgid ""
+"Les plus anciens caractères chinois ont été trouvés gravés sur des os "
+"d'animaux et des carapaces de tortues!"
+msgstr ""
+
+#: includes/fun-facts.php:180
+msgid ""
+"Plus d'un milliard de personnes utilisent les caractères chinois (en Chine, "
+"au Japon, et en Corée)."
+msgstr ""
+
+#: includes/fun-facts.php:183
+msgid "Écriture chinoise — Vikidia"
+msgstr ""
+
+#: includes/fun-facts.php:184
+msgid "Calligraphie — Vikidia"
+msgstr ""
+
+#: includes/fun-facts.php:189
+msgid ""
+"Tu sais que les notes de musique s'appellent DO, RÉ, MI, FA, SOL, LA, SI? Et "
+"bien on peut cacher des lettres dans les notes! C'est un code qui mélange "
+"deux choses géniales : la musique et les secrets."
+msgstr ""
+
+#: includes/fun-facts.php:191
+msgid ""
+"Le compositeur Bach cachait son nom dans ses compositions! B-A-C-H = Si "
+"bémol, La, Do, Si en notation allemande."
+msgstr ""
+
+#: includes/fun-facts.php:192
+msgid ""
+"Il y a seulement 7 notes mais des millions de chansons possibles — "
+"exactement comme avec 26 lettres on peut écrire des millions de mots!"
+msgstr ""
+
+#: includes/fun-facts.php:193
+msgid ""
+"Apprendre la musique aide le cerveau à mieux décoder les langages secrets — "
+"les scouts musiciens ont un avantage!"
+msgstr ""
+
+#: includes/fun-facts.php:196
+msgid "Solfège — Vikidia"
+msgstr ""
+
+#: includes/fun-facts.php:197
+msgid "Notes de musique — Vikidia"
+msgstr ""
+
+#: includes/fun-facts.php:202
+msgid ""
+"Imagine que toi et ton ami vous choisissez un mot secret (par exemple "
+"« SCOUT »). Ce mot devient votre « clé » pour encoder et décoder les "
+"messages. Sans la clé, personne ne peut lire le message. C'est le même "
+"principe que les mots de passe sur Internet!"
+msgstr ""
+
+#: includes/fun-facts.php:204
+msgid ""
+"Pendant la Seconde Guerre mondiale, les Alliés ont cassé le code allemand "
+"« Enigma » — ça a aidé à gagner la guerre!"
+msgstr ""
+
+#: includes/fun-facts.php:205
+msgid ""
+"Les scouts utilisent souvent un mot de passe de camp comme clé de "
+"chiffrement."
+msgstr ""
+
+#: includes/fun-facts.php:206
+msgid ""
+"Quand tu te connectes à un site web sécurisé (https://), ton navigateur "
+"utilise des « clés » de millions de chiffres!"
+msgstr ""
+
+#: includes/fun-facts.php:209
+msgid "Chiffre de Vigenère — Wikipédia"
+msgstr ""
+
+#: includes/fun-facts.php:215
+msgid ""
+"Le code inversé, c'est super simple : tu écris ton message à l'envers! "
+"« BONJOUR » devient « RUOJNOB ». Le code avocat est encore plus rigolo : tu "
+"coupes chaque mot en deux et tu inverses les moitiés. Facile à apprendre, "
+"difficile à lire pour les non-initiés!"
+msgstr ""
+
+#: includes/fun-facts.php:217
+msgid ""
+"Léonard de Vinci écrivait tous ses carnets à l'envers — il fallait un miroir "
+"pour les lire!"
+msgstr ""
+
+#: includes/fun-facts.php:218
+msgid ""
+"Certaines langues, comme l'arabe et l'hébreu, s'écrivent déjà de droite à "
+"gauche."
+msgstr ""
+
+#: includes/fun-facts.php:219
+msgid ""
+"L'inversion est une des techniques les plus anciennes — même les enfants "
+"romains jouaient avec il y a 2000 ans."
+msgstr ""
+
+#: includes/fun-facts.php:222
+msgid "Léonard de Vinci — Vikidia"
+msgstr ""
+
+#: includes/fun-facts.php:223
+msgid "Écriture spéculaire — Wikipédia"
+msgstr ""
+
+#: includes/fun-facts.php:228
+msgid ""
+"Imagine deux feuilles avec des grilles. Sur la première, tu écris ton "
+"message dans certaines cases. Ensuite, tu remplis les cases vides avec des "
+"lettres au hasard. Seul celui qui a la deuxième grille (le « masque ») peut "
+"retrouver les bonnes lettres! C'est comme un filtre magique."
+msgstr ""
+
+#: includes/fun-facts.php:230
+msgid ""
+"Ce type de code s'appelle un « grille tournante » ou « cardan » — inventé au "
+"XVIe siècle par Jérôme Cardan."
+msgstr ""
+
+#: includes/fun-facts.php:231
+msgid ""
+"Les espions de la Première Guerre mondiale utilisaient des grilles cachées "
+"dans des cartes postales!"
+msgstr ""
+
+#: includes/fun-facts.php:232
+msgid ""
+"Tu peux fabriquer tes propres grilles avec du carton et des ciseaux — un "
+"super projet de bricolage scout!"
+msgstr ""
+
+#: includes/fun-facts.php:235
+msgid "Grille de Cardan — Wikipédia"
+msgstr ""
+
+#: includes/fun-facts.php:236
+msgid "Stéganographie — Vikidia"
+msgstr ""
+
+#: includes/fun-facts.php:241
+msgid ""
+"Le code solaire utilise la position du soleil et les cadrans solaires comme "
+"inspiration. Chaque lettre est représentée par un symbole qui ressemble à la "
+"position d'une ombre sur un cadran. C'est un code qui connecte la nature et "
+"les secrets!"
+msgstr ""
+
+#: includes/fun-facts.php:243
+msgid ""
+"Les cadrans solaires sont parmi les plus anciennes « machines » inventées "
+"par l'humain — plus de 3500 ans!"
+msgstr ""
+
+#: includes/fun-facts.php:244
+msgid ""
+"Les scouts apprennent à lire l'heure avec le soleil et une boussole — très "
+"utile en camping!"
+msgstr ""
+
+#: includes/fun-facts.php:245
+msgid ""
+"Un cadran solaire fonctionne différemment selon l'endroit où tu te trouves "
+"sur la Terre."
+msgstr ""
+
+#: includes/fun-facts.php:248
+msgid "Cadran solaire — Vikidia"
+msgstr ""
+
+#: includes/fun-facts.php:286
+msgid "Inventeur"
+msgstr ""
+
+#: includes/fun-facts.php:300
+msgid "Expliqué simplement :"
+msgstr ""
+
+#: includes/fun-facts.php:307
+msgid "Le savais-tu?"
+msgstr ""
+
+#: includes/fun-facts.php:320
+msgid "Pour en savoir plus"
+msgstr ""
+
+#: includes/fun-facts.php:328
+msgid ""
+"Les liens vers Vikidia sont adaptés aux jeunes lecteurs. Les liens Wikipédia "
+"sont plus détaillés pour les animateurs et parents."
+msgstr ""
+
+#: pages/code-ascii.php:41
+msgid "Table ASCII"
+msgstr ""
+
+#: pages/code-ascii.php:42
+msgid ""
+"Ce code est utilisé en informatique. Chaque lettre a une valeur en "
+"<strong>décimal</strong> (DEC), <strong>hexadécimal</strong> (HEX) et "
+"<strong>binaire</strong> (BIN). Cliquez sur un caractère pour l'ajouter à "
+"votre message."
+msgstr ""
+
+#: pages/code-ascii.php:46 pages/code-braille.php:51 pages/code-musique.php:40
+#: scout-codes.php:617
+msgid "Encodeur"
+msgstr ""
+
+#: pages/code-ascii.php:47 pages/code-braille.php:52
+#: pages/code-grec-rune-semaphore.php:64 pages/code-grec-rune-semaphore.php:82
+#: pages/code-grec-rune-semaphore.php:97 pages/code-musique.php:41
+msgid "Tapez votre message..."
+msgstr ""
+
+#: pages/code-ascii.php:49
+msgid "Décimal"
+msgstr ""
+
+#: pages/code-ascii.php:50
+msgid "Hexadécimal"
+msgstr ""
+
+#: pages/code-ascii.php:51
+msgid "Binaire"
+msgstr ""
+
+#: pages/code-ascii.php:54 pages/code-braille.php:54
+#: pages/code-deux-grilles.php:117 pages/code-grec-rune-semaphore.php:83
+#: pages/code-grec-rune-semaphore.php:98 pages/code-inverse-avocat.php:105
+#: pages/code-musique.php:43 pages/code-tictactoc.php:111
+msgid "Encoder"
+msgstr ""
+
+#: pages/code-ascii.php:55 pages/code-braille.php:55 pages/code-chinois.php:105
+#: pages/code-cle.php:62 pages/code-deux-grilles.php:118
+#: pages/code-grec-rune-semaphore.php:83 pages/code-grec-rune-semaphore.php:98
+#: pages/code-inverse-avocat.php:114 pages/code-morse.php:115
+#: pages/code-musique.php:44 pages/code-samourais.php:88
+#: pages/code-substitution.php:83 pages/code-telephone.php:92
+#: pages/code-tictactoc.php:112
+msgid "Effacer"
+msgstr ""
+
+#: pages/code-ascii.php:56 pages/code-ascii.php:69 pages/code-cle.php:63
+#: pages/code-cle.php:74 pages/code-inverse-avocat.php:115
+#: pages/code-inverse-avocat.php:127 pages/code-morse.php:116
+#: pages/code-morse.php:146 pages/code-substitution.php:84
+#: pages/code-substitution.php:116 pages/code-telephone.php:93
+#: pages/code-telephone.php:109 scout-codes.php:249 scout-codes.php:272
+msgid "Copier"
+msgstr ""
+
+#: pages/code-ascii.php:57 pages/code-braille.php:57 pages/code-cle.php:64
+msgid "Exporter .txt"
+msgstr ""
+
+#: pages/code-ascii.php:59 pages/code-ascii.php:65
+msgid "DÉCIMAL"
+msgstr ""
+
+#: pages/code-ascii.php:66
+msgid "HEXADÉCIMAL"
+msgstr ""
+
+#: pages/code-ascii.php:67
+msgid "BINAIRE"
+msgstr ""
+
+#: pages/code-ascii.php:68 pages/code-cle.php:73
+#: pages/code-inverse-avocat.php:126 pages/code-morse.php:145
+#: pages/code-substitution.php:115 pages/code-telephone.php:108
+#: scout-codes.php:271
+msgid "Copié!"
+msgstr ""
+
+#: pages/code-ascii.php:70 pages/code-braille.php:65 pages/code-cle.php:77
+msgid "Original:"
+msgstr ""
+
+#: pages/code-ascii.php:71
+msgid "Encodé:"
+msgstr ""
+
+#: pages/code-braille.php:40 pages/code-chinois.php:56 pages/code-cle.php:40
+#: pages/code-deux-grilles.php:75 pages/code-musique.php:34
+#: pages/code-samourais.php:55 pages/code-tictactoc.php:78
+msgid "Comment ça marche?"
+msgstr ""
+
+#: pages/code-braille.php:41
+msgid ""
+"Chaque lettre est représentée par une cellule de <strong>2 colonnes × 3 "
+"rangées</strong> (6 positions). Les gros points sont en relief (remplis), "
+"les petits sont absents (vides). Pour les chiffres, on ajoute un préfixe "
+"spécial ⠼ devant les lettres A(=1) à J(=0)."
+msgstr ""
+
+#: pages/code-braille.php:43
+msgid "Positions dans la cellule :"
+msgstr ""
+
+#: pages/code-braille.php:45
+msgid ""
+"Seuls les gros points sont imprimés. Les petits points sont donnés ici pour "
+"référence seulement."
+msgstr ""
+
+#: pages/code-braille.php:47 pages/code-musique.php:36
+msgid "ALPHABET — CLIQUEZ POUR AJOUTER"
+msgstr ""
+
+#: pages/code-braille.php:56 pages/code-musique.php:45
+msgid "Exporter SVG"
+msgstr ""
+
+#: pages/code-braille.php:59
+msgid "BRAILLE"
+msgstr ""
+
+#: pages/code-chinois.php:57
+msgid ""
+"Le Code Chinois est <strong>l'inverse du Code des Samouraïs</strong>. On "
+"commence la lecture par les traits <strong>horizontaux</strong> (qui "
+"représentent la voyelle), puis les traits <strong>verticaux</strong> (qui "
+"avancent dans l'alphabet)."
+msgstr ""
+
+#: pages/code-chinois.php:60
+msgid "Voyelles = traits horizontaux :"
+msgstr ""
+
+#: pages/code-chinois.php:61
+msgid "Consonnes = voyelle horizontale + traits verticaux"
+msgstr ""
+
+#: pages/code-chinois.php:62
+msgid "Séparateurs :"
+msgstr ""
+
+#: pages/code-chinois.php:62
+msgid "\\ sépare les mots · \\\\ sépare les phrases"
+msgstr ""
+
+#: pages/code-chinois.php:63
+msgid "Attention: c'est <strong>exactement l'inverse</strong> du Samouraï!"
+msgstr ""
+
+#: pages/code-chinois.php:69
+msgid "SAMOURAÏ"
+msgstr ""
+
+#: pages/code-chinois.php:70
+msgid "Verticaux d'abord → Horizontaux"
+msgstr ""
+
+#: pages/code-chinois.php:76
+msgid "CHINOIS"
+msgstr ""
+
+#: pages/code-chinois.php:77
+msgid "Horizontaux d'abord → Verticaux"
+msgstr ""
+
+#: pages/code-chinois.php:86
+msgid "Séparateurs"
+msgstr ""
+
+#: pages/code-chinois.php:87
+msgid ""
+"Utilisez <strong>\\</strong> pour séparer les mots et <strong>\\\\</strong> "
+"pour séparer les phrases."
+msgstr ""
+
+#: pages/code-chinois.php:93 pages/code-cle.php:50
+#: pages/code-inverse-avocat.php:97 pages/code-morse.php:101
+#: pages/code-samourais.php:76 pages/code-substitution.php:66
+#: pages/code-telephone.php:80
+msgid "Encodeur / Décodeur"
+msgstr ""
+
+#: pages/code-chinois.php:96
+msgid "Texte → Chinois"
+msgstr ""
+
+#: pages/code-chinois.php:97
+msgid "Chinois → Texte"
+msgstr ""
+
+#: pages/code-chinois.php:101 pages/code-chinois.php:117
+#: pages/code-deux-grilles.php:114 pages/code-inverse-avocat.php:110
+#: pages/code-morse.php:109 pages/code-morse.php:141
+#: pages/code-samourais.php:84 pages/code-samourais.php:100
+#: pages/code-substitution.php:79 pages/code-substitution.php:110
+#: pages/code-telephone.php:88 pages/code-telephone.php:104
+#: pages/code-tictactoc.php:108
+msgid "Tapez votre message ici..."
+msgstr ""
+
+#: pages/code-chinois.php:104 pages/code-cle.php:61
+#: pages/code-inverse-avocat.php:113 pages/code-morse.php:113
+#: pages/code-samourais.php:87 pages/code-substitution.php:82
+#: pages/code-telephone.php:91
+msgid "Convertir"
+msgstr ""
+
+#: pages/code-chinois.php:106 pages/code-samourais.php:89
+msgid "SVG"
+msgstr ""
+
+#: pages/code-chinois.php:109 pages/code-chinois.php:119
+msgid "SYMBOLES CHINOIS"
+msgstr ""
+
+#: pages/code-chinois.php:110 pages/code-chinois.php:121
+#: pages/code-samourais.php:93 pages/code-samourais.php:104
+msgid "Votre message apparaîtra ici..."
+msgstr ""
+
+#: pages/code-chinois.php:118
+msgid "Entrez le code (ex: 1H+2V 2H+3V) séparé par espaces..."
+msgstr ""
+
+#: pages/code-chinois.php:120 pages/code-morse.php:144
+#: pages/code-samourais.php:103 pages/code-substitution.php:114
+#: pages/code-telephone.php:107
+msgid "TEXTE"
+msgstr ""
+
+#: pages/code-cle.php:41
+msgid ""
+"On utilise une <strong>clé numérique</strong> (ex: 321) qui décale chaque "
+"lettre d'un montant différent en cycle. La 1re lettre est décalée de +3, la "
+"2e de +2, la 3e de +1, puis on recommence : la 4e de +3, etc. Sans la clé, "
+"le message est indéchiffrable!"
+msgstr ""
+
+#: pages/code-cle.php:43
+msgid "Exemple :"
+msgstr ""
+
+#: pages/code-cle.php:43
+msgid "Message « AKELA VA » avec clé <strong>321</strong>"
+msgstr ""
+
+#: pages/code-cle.php:45
+msgid "Message transmis : <strong>DMFOC WD</strong>"
+msgstr ""
+
+#: pages/code-cle.php:46
+msgid "Pour décoder, il faut faire −3, −2, −1 (l'inverse)."
+msgstr ""
+
+#: pages/code-cle.php:52
+msgid "CLÉ NUMÉRIQUE"
+msgstr ""
+
+#: pages/code-cle.php:56
+msgid "Encoder (+)"
+msgstr ""
+
+#: pages/code-cle.php:57
+msgid "Décoder (−)"
+msgstr ""
+
+#: pages/code-cle.php:66
+msgid "RÉSULTAT"
+msgstr ""
+
+#: pages/code-cle.php:75
+msgid "CLÉ DE CODE"
+msgstr ""
+
+#: pages/code-cle.php:76
+msgid "Clé:"
+msgstr ""
+
+#: pages/code-cle.php:78
+msgid "Résultat:"
+msgstr ""
+
+#: pages/code-deux-grilles.php:76
+msgid ""
+"Les 26 lettres sont réparties dans deux grilles en # (3×3) et un X. Chaque "
+"lettre est représentée par la <strong>forme de son compartiment</strong> "
+"dans la grille, plus des <strong>points</strong> pour sa position (1er = "
+"aucun point, 2e = 1 point, 3e = 2 points)."
+msgstr ""
+
+#: pages/code-deux-grilles.php:81
+msgid "Grille # (sans point)"
+msgstr ""
+
+#: pages/code-deux-grilles.php:86
+msgid "Grille # (avec point)"
+msgstr ""
+
+#: pages/code-deux-grilles.php:91
+msgid "Grille X"
+msgstr ""
+
+#: pages/code-deux-grilles.php:102 pages/code-tictactoc.php:98
+msgid "Exemple: MIEUX"
+msgstr ""
+
+#: pages/code-deux-grilles.php:103
+msgid ""
+"M = grille 2, centre-gauche (avec point) · I = grille 1, bas-droite · E = "
+"grille 1, centre-centre · U = grille 2, bas-centre · X = grille X, droite "
+"(avec point)"
+msgstr ""
+
+#: pages/code-deux-grilles.php:110 pages/code-tictactoc.php:105
+msgid "Créez votre message secret"
+msgstr ""
+
+#: pages/code-deux-grilles.php:111
+msgid ""
+"Tapez du texte ou cliquez sur les lettres ci-dessous pour générer les "
+"symboles Deux Grilles."
+msgstr ""
+
+#: pages/code-deux-grilles.php:119 pages/code-tictactoc.php:113
+msgid "Télécharger SVG"
+msgstr ""
+
+#: pages/code-deux-grilles.php:122 pages/code-tictactoc.php:115
+msgid "MESSAGE ENCODÉ"
+msgstr ""
+
+#: pages/code-deux-grilles.php:123 pages/code-deux-grilles.php:142
+#: pages/code-tictactoc.php:116 pages/code-tictactoc.php:127
+msgid "Votre message apparaîtra ici en symboles..."
+msgstr ""
+
+#: pages/code-deux-grilles.php:126 pages/code-tictactoc.php:118
+msgid "CLIQUEZ POUR AJOUTER"
+msgstr ""
+
+#: pages/code-deux-grilles.php:133
+msgid "Décodeur"
+msgstr ""
+
+#: pages/code-deux-grilles.php:134
+msgid ""
+"Entrez le texte encodé en lettres et voyez le résultat — ou utilisez "
+"l'encodeur ci-dessus et lisez les lettres sous chaque symbole."
+msgstr ""
+
+#: pages/code-grec-rune-semaphore.php:50
+msgid "Alphabet Grec et Cyrillique"
+msgstr ""
+
+#: pages/code-grec-rune-semaphore.php:51
+msgid ""
+"On remplace chaque lettre latine par son équivalent grec (GR.) ou cyrillique "
+"russe (CYR.). C'est un code de substitution visuel — le message semble être "
+"dans une autre langue (p. 140)."
+msgstr ""
+
+#: pages/code-grec-rune-semaphore.php:55
+msgid "ALPHABET GREC"
+msgstr ""
+
+#: pages/code-grec-rune-semaphore.php:59
+msgid "ALPHABET CYRILLIQUE"
+msgstr ""
+
+#: pages/code-grec-rune-semaphore.php:66
+msgid "Grec"
+msgstr ""
+
+#: pages/code-grec-rune-semaphore.php:67
+msgid "Cyrillique"
+msgstr ""
+
+#: pages/code-grec-rune-semaphore.php:69 pages/code-grec-rune-semaphore.php:107
+msgid "GREC"
+msgstr ""
+
+#: pages/code-grec-rune-semaphore.php:77
+msgid "L'Alphabet Runique (Viking)"
+msgstr ""
+
+#: pages/code-grec-rune-semaphore.php:78
+msgid ""
+"Les runes sont l'écriture des anciens peuples nordiques (Vikings). Chaque "
+"lettre latine a un équivalent runique. Parfait pour les messages mystérieux! "
+"(p. 143)"
+msgstr ""
+
+#: pages/code-grec-rune-semaphore.php:84
+msgid "RUNES"
+msgstr ""
+
+#: pages/code-grec-rune-semaphore.php:92
+msgid "Le Code du Sémaphore"
+msgstr ""
+
+#: pages/code-grec-rune-semaphore.php:93
+msgid ""
+"Le code est interprété comme si on voyait quelqu'un qui agite deux drapeaux "
+"de face. Le bras droit et le bras gauche prennent différentes positions pour "
+"former chaque lettre. Utilisez du tissu blanc et rouge pour être vu de loin "
+"(p. 141)."
+msgstr ""
+
+#: pages/code-grec-rune-semaphore.php:99
+msgid "SÉMAPHORE"
+msgstr ""
+
+#: pages/code-grec-rune-semaphore.php:108
+msgid "CYRILLIQUE"
+msgstr ""
+
+#: pages/code-inverse-avocat.php:68
+msgid "L'Alphabet Inversé"
+msgstr ""
+
+#: pages/code-inverse-avocat.php:71
+msgid ""
+"On inverse simplement l'alphabet : A↔Z, B↔Y, C↔X, etc. Les lettres du milieu "
+"(M↔N) sont proches l'une de l'autre. Ce code est <strong>symétrique</strong> "
+"— encoder et décoder utilisent la même table!"
+msgstr ""
+
+#: pages/code-inverse-avocat.php:76 pages/code-inverse-avocat.php:91
+msgid "Astuce :"
+msgstr ""
+
+#: pages/code-inverse-avocat.php:76
+msgid ""
+"Ce code est son propre inverse! Si vous encodez « BONJOUR » vous obtenez "
+"« YLMQLFI ». Si vous encodez « YLMQLFI » vous retrouvez « BONJOUR ». Pas "
+"besoin de décoder différemment!"
+msgstr ""
+
+#: pages/code-inverse-avocat.php:83
+msgid "Le Code de l'Avocat"
+msgstr ""
+
+#: pages/code-inverse-avocat.php:86
+msgid ""
+"Ce code tire son nom du fait que la lettre « A » vaut « K ». Chaque lettre "
+"est décalée de <strong>+10 positions</strong> dans l'alphabet (avec retour "
+"au début après Z)."
+msgstr ""
+
+#: pages/code-inverse-avocat.php:91
+msgid ""
+"Pour décoder, il faut décaler de −10 (ou +16, ce qui revient au même). Ce "
+"code n'est PAS symétrique contrairement à l'Alphabet Inversé."
+msgstr ""
+
+#: pages/code-inverse-avocat.php:100
+msgid "Alphabet Inversé"
+msgstr ""
+
+#: pages/code-inverse-avocat.php:101
+msgid "Code de l'Avocat"
+msgstr ""
+
+#: pages/code-inverse-avocat.php:106
+msgid "Décoder"
+msgstr ""
+
+#: pages/code-inverse-avocat.php:118
+msgid "MESSAGE CODÉ"
+msgstr ""
+
+#: pages/code-morse.php:93
+msgid "Truc pour mémoriser"
+msgstr ""
+
+#: pages/code-morse.php:94
+msgid "Chaque lettre a un mot-clé. Dans ce mot, chaque"
+msgstr ""
+
+#: pages/code-morse.php:94
+msgid "voyelle = point ·"
+msgstr ""
+
+#: pages/code-morse.php:94
+msgid "et chaque"
+msgstr ""
+
+#: pages/code-morse.php:94
+msgid "consonne = trait —"
+msgstr ""
+
+#: pages/code-morse.php:95
+msgid "Exemple: A = « as » → voyelle + consonne →"
+msgstr ""
+
+#: pages/code-morse.php:96
+msgid "C = « coco » → consonne voyelle consonne voyelle →"
+msgstr ""
+
+#: pages/code-morse.php:104
+msgid "Texte → Morse"
+msgstr ""
+
+#: pages/code-morse.php:105
+msgid "Morse → Texte"
+msgstr ""
+
+#: pages/code-morse.php:114
+msgid "Écouter"
+msgstr ""
+
+#: pages/code-morse.php:119 pages/code-morse.php:143
+msgid "MORSE"
+msgstr ""
+
+#: pages/code-morse.php:127
+msgid "Alphabet Morse complet"
+msgstr ""
+
+#: pages/code-morse.php:128
+msgid "Cliquez sur une lettre pour l'ajouter à votre message"
+msgstr ""
+
+#: pages/code-morse.php:132
+msgid "Chiffres"
+msgstr ""
+
+#: pages/code-morse.php:142
+msgid ""
+"Collez du morse ici (séparez les lettres par des espaces, les mots par /)..."
+msgstr ""
+
+#: pages/code-musique.php:35
+msgid ""
+"Chaque lettre de l'alphabet correspond à une note musicale. Première "
+"portée : A–M (13 notes montantes), deuxième portée : N–Z (13 notes). Les "
+"chiffres 1–9 et 0 occupent une troisième portée. Cliquez sur les lettres ou "
+"tapez votre message!"
+msgstr ""
+
+#: pages/code-musique.php:47
+msgid "PORTÉE MUSICALE"
+msgstr ""
+
+#: pages/code-samourais.php:56
+msgid ""
+"La clé : on commence la lecture par les <strong>traits verticaux</strong> "
+"(les voyelles), puis les <strong>traits horizontaux</strong> (qui avancent "
+"dans l'alphabet après cette voyelle)."
+msgstr ""
+
+#: pages/code-samourais.php:59
+msgid "Voyelles = traits verticaux :"
+msgstr ""
+
+#: pages/code-samourais.php:60
+msgid "Consonnes = voyelle + traits horizontaux :"
+msgstr ""
+
+#: pages/code-samourais.php:60
+msgid ""
+"À partir de la voyelle, on avance dans l'alphabet avec les traits "
+"horizontaux."
+msgstr ""
+
+#: pages/code-samourais.php:61
+msgid ""
+"Exemple : B = 1V+1H (1 après A), C = 1V+2H (2 après A), D = 1V+3H (3 après A)"
+msgstr ""
+
+#: pages/code-samourais.php:63
+msgid "Lecture :"
+msgstr ""
+
+#: pages/code-samourais.php:63
+msgid ""
+"Traits verticaux d'abord → donne la voyelle de base → traits horizontaux → "
+"avance d'autant de lettres."
+msgstr ""
+
+#: pages/code-samourais.php:69
+msgid "Exemple : CHAT"
+msgstr ""
+
+#: pages/code-samourais.php:79
+msgid "Texte → Samouraï"
+msgstr ""
+
+#: pages/code-samourais.php:80
+msgid "Samouraï → Texte"
+msgstr ""
+
+#: pages/code-samourais.php:92 pages/code-samourais.php:102
+msgid "SYMBOLES SAMOURAÏS"
+msgstr ""
+
+#: pages/code-samourais.php:101
+msgid "Entrez le code (ex: 1V+2H 2V+3H ou 1,2 2,3) séparé par espaces..."
+msgstr ""
+
+#: pages/code-solair.php:25
+msgid "Symboles d'urgence"
+msgstr ""
+
+#: pages/code-solair.php:26
+msgid ""
+"Ces symboles servent à communiquer avec un avion de secours depuis le sol. "
+"Ils doivent être tracés au sol avec des matériaux visibles (branches, "
+"pierres, tissu, neige) et mesurer au minimum <strong>2.5 mètres (8 pieds)</"
+"strong> de longueur."
+msgstr ""
+
+#: pages/code-solair.php:29
+msgid "Besoin de médicaments"
+msgstr ""
+
+#: pages/code-solair.php:29
+msgid "1 trait vertical"
+msgstr ""
+
+#: pages/code-solair.php:30
+msgid "Incapable de poursuivre"
+msgstr ""
+
+#: pages/code-solair.php:30
+msgid "2 traits verticaux"
+msgstr ""
+
+#: pages/code-solair.php:31
+msgid "Besoin de carte et boussole"
+msgstr ""
+
+#: pages/code-solair.php:31
+msgid "Croix en X"
+msgstr ""
+
+#: pages/code-solair.php:32
+msgid "Besoin d'eau et nourriture"
+msgstr ""
+
+#: pages/code-solair.php:32
+msgid "Lettre F"
+msgstr ""
+
+#: pages/code-solair.php:33
+msgid "Besoin de réparation"
+msgstr ""
+
+#: pages/code-solair.php:33
+msgid "Carré / lettre W"
+msgstr ""
+
+#: pages/code-solair.php:34
+msgid "Besoin de carburant et huile"
+msgstr ""
+
+#: pages/code-solair.php:34
+msgid "Lettre L"
+msgstr ""
+
+#: pages/code-solair.php:35
+msgid "Voyage dans cette direction"
+msgstr ""
+
+#: pages/code-solair.php:35
+msgid "Flèche directionnelle"
+msgstr ""
+
+#: pages/code-solair.php:36
+msgid "Non / négatif"
+msgstr ""
+
+#: pages/code-solair.php:36
+msgid "Lettre N"
+msgstr ""
+
+#: pages/code-solair.php:37
+msgid "Oui / affirmatif"
+msgstr ""
+
+#: pages/code-solair.php:37
+msgid "Lettre Y"
+msgstr ""
+
+#: pages/code-solair.php:38
+msgid "Tout va bien"
+msgstr ""
+
+#: pages/code-solair.php:38
+msgid "Deux L"
+msgstr ""
+
+#: pages/code-solair.php:42
+msgid "Important :"
+msgstr ""
+
+#: pages/code-solair.php:42
+msgid ""
+"Ces symboles doivent être <strong>très grands</strong> (minimum 2.5m) pour "
+"être vus du ciel. Utilisez un contraste fort avec le terrain environnant. "
+"Des branches sombres sur neige blanche, ou des pierres claires sur terre "
+"foncée, fonctionnent le mieux."
+msgstr ""
+
+#: pages/code-substitution.php:59 pages/code-telephone.php:59
+msgid "Le principe"
+msgstr ""
+
+#: pages/code-substitution.php:60
+msgid ""
+"Chaque lettre est remplacée par son numéro dans l'alphabet. On peut aussi "
+"utiliser les <strong>chiffres romains</strong> pour rendre le code plus "
+"difficile à décoder. Cliquez sur une lettre pour l'ajouter à votre message!"
+msgstr ""
+
+#: pages/code-substitution.php:69
+msgid "Texte → Chiffres"
+msgstr ""
+
+#: pages/code-substitution.php:70
+msgid "Chiffres → Texte"
+msgstr ""
+
+#: pages/code-substitution.php:74
+msgid "Chiffres (1-26)"
+msgstr ""
+
+#: pages/code-substitution.php:75
+msgid "Chiffres romains"
+msgstr ""
+
+#: pages/code-substitution.php:87 pages/code-substitution.php:113
+msgid "CHIFFRES"
+msgstr ""
+
+#: pages/code-substitution.php:91
+msgid "Chiffres romains — aide-mémoire"
+msgstr ""
+
+#: pages/code-substitution.php:92
+msgid ""
+"Les unités de base : I=1, V=5, X=10, L=50, C=100, D=500, M=1000. Les plus "
+"grosses unités sont placées au début. Si une unité plus petite est placée "
+"devant une plus grosse, on la soustrait."
+msgstr ""
+
+#: pages/code-substitution.php:111
+msgid "Entrez les chiffres séparés par des espaces (ex: 1 12 5 24)..."
+msgstr ""
+
+#: pages/code-substitution.php:112
+msgid "CHIFFRES ROMAINS"
+msgstr ""
+
+#: pages/code-telephone.php:60
+msgid ""
+"Ce code se retrouve sur tout téléphone. Chaque touche porte 3 lettres. Pour "
+"coder une lettre, on écrit le <strong>numéro de la touche</strong> avec la "
+"<strong>position de la lettre en exposant</strong>. Exemple : C est la 3e "
+"lettre de la touche 2, donc C = 2<sup>3</sup>."
+msgstr ""
+
+#: pages/code-telephone.php:64
+msgid "Appuyez sur une lettre..."
+msgstr ""
+
+#: pages/code-telephone.php:69
+msgid "Exemple : CAMP = 2³ 2¹ 6¹ 7¹"
+msgstr ""
+
+#: pages/code-telephone.php:70
+msgid "C = touche 2, 3e lettre → 2³"
+msgstr ""
+
+#: pages/code-telephone.php:71
+msgid "A = touche 2, 1re lettre → 2¹"
+msgstr ""
+
+#: pages/code-telephone.php:72
+msgid "M = touche 6, 1re lettre → 6¹"
+msgstr ""
+
+#: pages/code-telephone.php:73
+msgid "P = touche 7, 1re lettre → 7¹"
+msgstr ""
+
+#: pages/code-telephone.php:74
+msgid "Autre exemple : 3¹=D, 3²=E, 3³=F"
+msgstr ""
+
+#: pages/code-telephone.php:83
+msgid "Texte → Code téléphone"
+msgstr ""
+
+#: pages/code-telephone.php:84
+msgid "Code → Texte"
+msgstr ""
+
+#: pages/code-telephone.php:96 pages/code-telephone.php:106
+msgid "CODE TÉLÉPHONE"
+msgstr ""
+
+#: pages/code-telephone.php:105
+msgid "Entrez le code (ex: 2³ 2¹ 6¹ 7¹ ou 23 21 61 71)..."
+msgstr ""
+
+#: pages/code-telephone.php:110
+msgid "touche"
+msgstr ""
+
+#: pages/code-telephone.php:111
+msgid "position"
+msgstr ""
+
+#: pages/code-tictactoc.php:79
+msgid ""
+"On dessine une grille de tic-tac-toc (3×3 = 9 cases). Chaque case est "
+"<strong>divisée en 3 sections verticales</strong>. Les lettres remplissent "
+"les sections de gauche à droite, case par case : A B C dans la case 1, D E F "
+"dans la case 2, etc. La case 9 ne contient que Y et Z."
+msgstr ""
+
+#: pages/code-tictactoc.php:80
+msgid ""
+"Le symbole = la <strong>forme de la case</strong> (ses bords dans la grille "
+"#) + un <strong>point positionné</strong> dans la bonne section (gauche, "
+"centre ou droite). C'est la <strong>position du point</strong> qui identifie "
+"la lettre!"
+msgstr ""
+
+#: pages/code-tictactoc.php:83
+msgid "La position du point est la clé :"
+msgstr ""
+
+#: pages/code-tictactoc.php:83
+msgid ""
+"Le point est placé à gauche (1re lettre), au centre (2e lettre), ou à droite "
+"(3e lettre) à l'intérieur de la forme de la case. Un point centré ne "
+"signifie PAS la même chose qu'un point à gauche!"
+msgstr ""
+
+#: pages/code-tictactoc.php:87
+msgid "Cliquez sur une lettre"
+msgstr ""
+
+#: pages/code-tictactoc.php:99
+msgid ""
+"M = case 5, point à gauche · I = case 3, point à droite · E = case 2, point "
+"au centre · U = case 7, point à droite · X = case 8, point à droite"
+msgstr ""
+
+#: pages/code-tictactoc.php:106
+msgid ""
+"Tapez du texte ou cliquez sur les lettres du tableau / alphabet ci-dessous."
+msgstr ""
+
+#: pages/code-tictactoc.php:128
+msgid "gauche"
+msgstr ""
+
+#: pages/code-tictactoc.php:129
+msgid "centre"
+msgstr ""
+
+#: pages/code-tictactoc.php:130
+msgid "droite"
+msgstr ""
+
+#: pages/code-tictactoc.php:131
+msgid "case"
+msgstr ""
+
+#: pages/code-tictactoc.php:132
+msgid "point"
+msgstr ""
+
+#: pages/code-tictactoc.php:133
+msgid "pt"
+msgstr ""
+
+#: scout-codes.php:24 scout-codes.php:503
+msgid "Code Morse"
+msgstr ""
+
+#: scout-codes.php:26
+msgid ""
+"Inventé par Samuel Morse en 1836. Points et tirets transmis par télégraphe."
+msgstr ""
+
+#: scout-codes.php:36
+msgid "Chiffre de César"
+msgstr ""
+
+#: scout-codes.php:38
+msgid "Décalage de l'alphabet. César utilisait un décalage de 3 lettres."
+msgstr ""
+
+#: scout-codes.php:42
+msgid "Chiffre Atbash"
+msgstr ""
+
+#: scout-codes.php:44
+msgid "Substitution miroir : A↔Z, B↔Y, C↔X, etc. D'origine hébraïque."
+msgstr ""
+
+#: scout-codes.php:47 scout-codes.php:513
+msgid "Code binaire (ASCII)"
+msgstr ""
+
+#: scout-codes.php:49
+msgid "Chaque lettre est représentée par 8 bits (0 et 1)."
+msgstr ""
+
+#: scout-codes.php:52
+msgid "Pigpen (Franc-maçon)"
+msgstr ""
+
+#: scout-codes.php:54
+msgid "Code géométrique utilisé par les Francs-maçons au XVIIIe siècle."
+msgstr ""
+
+#: scout-codes.php:63
+msgid "Sémaphore (drapeaux)"
+msgstr ""
+
+#: scout-codes.php:65
+msgid "Communication par positions de drapeaux. Utilisé en mer."
+msgstr ""
+
+#: scout-codes.php:75 scout-codes.php:505
+msgid "Braille"
+msgstr ""
+
+#: scout-codes.php:77 scout-codes.php:506
+msgid "Système tactile à 6 points inventé par Louis Braille en 1824."
+msgstr ""
+
+#: scout-codes.php:86
+msgid "Code Navajo"
+msgstr ""
+
+#: scout-codes.php:88
+msgid "Inspiré des Code Talkers de la Seconde Guerre mondiale."
+msgstr ""
+
+#: scout-codes.php:206
+msgid "Code du jour"
+msgstr ""
+
+#: scout-codes.php:215
+msgid "Indice : cliquez pour voir la réponse"
+msgstr ""
+
+#: scout-codes.php:234
+msgid "Encodeur de messages secrets"
+msgstr ""
+
+#: scout-codes.php:235
+msgid "Entrez votre message ici..."
+msgstr ""
+
+#: scout-codes.php:243
+msgid "Décalage:"
+msgstr ""
+
+#: scout-codes.php:246
+msgid "Encoder →"
+msgstr ""
+
+#: scout-codes.php:314
+msgid "Décalage de 3 (modifiable dans l'encodeur)"
+msgstr ""
+
+#: scout-codes.php:354 scout-codes.php:355
+msgid "Codes scouts"
+msgstr ""
+
+#: scout-codes.php:366
+msgid "Messages sauvegardés!"
+msgstr ""
+
+#: scout-codes.php:370
+msgid "Code du jour mis à jour!"
+msgstr ""
+
+#: scout-codes.php:383
+msgid "Codes scouts — Configuration"
+msgstr ""
+
+#: scout-codes.php:386
+msgid "Code du jour — Forcer un code"
+msgstr ""
+
+#: scout-codes.php:387
+msgid ""
+"Par défaut, le code change automatiquement chaque jour. Vous pouvez forcer "
+"un code spécifique."
+msgstr ""
+
+#: scout-codes.php:391
+msgid "Automatique (change chaque jour)"
+msgstr ""
+
+#: scout-codes.php:396
+msgid "Appliquer"
+msgstr ""
+
+#: scout-codes.php:398
+#, php-format
+msgid "Code forcé : %s"
+msgstr ""
+
+#: scout-codes.php:404
+msgid "Messages à encoder"
+msgstr ""
+
+#: scout-codes.php:405
+msgid ""
+"Un message par ligne. Le système choisit un message différent chaque jour "
+"pour le \"Code du jour\"."
+msgstr ""
+
+#: scout-codes.php:410
+msgid "Sauvegarder les messages"
+msgstr ""
+
+#: scout-codes.php:411
+#, php-format
+msgid "%d messages configurés"
+msgstr ""
+
+#: scout-codes.php:417
+msgid "Shortcodes disponibles"
+msgstr ""
+
+#: scout-codes.php:419
+msgid ""
+"Affiche le code du jour avec un message encodé. Change automatiquement "
+"chaque jour."
+msgstr ""
+
+#: scout-codes.php:419 scout-codes.php:421
+msgid "Options:"
+msgstr ""
+
+#: scout-codes.php:419
+msgid "pour forcer un code,"
+msgstr ""
+
+#: scout-codes.php:419
+msgid "pour un message fixe."
+msgstr ""
+
+#: scout-codes.php:420
+msgid ""
+"Outil interactif pour encoder des messages dans n'importe quel code scout."
+msgstr ""
+
+#: scout-codes.php:421
+msgid "Tableau de référence de tous les codes."
+msgstr ""
+
+#: scout-codes.php:421
+msgid "pour afficher un seul code."
+msgstr ""
+
+#: scout-codes.php:427
+msgid "Portraits des inventeurs"
+msgstr ""
+
+#: scout-codes.php:428
+#, php-format
+msgid ""
+"Téléversez des portraits depuis votre ordinateur. Utilisez des images du "
+"domaine public (Wikimedia Commons). Les images doivent être importées dans "
+"la <a href=\"%s\">bibliothèque de médias</a> d'abord."
+msgstr ""
+
+#: scout-codes.php:434
+msgid "Portraits sauvegardés!"
+msgstr ""
+
+#: scout-codes.php:439
+msgid "Code"
+msgstr ""
+
+#: scout-codes.php:439
+msgid "URL de l'image (depuis la bibliothèque de médias)"
+msgstr ""
+
+#: scout-codes.php:439
+msgid "Aperçu"
+msgstr ""
+
+#: scout-codes.php:452
+msgid "Sauvegarder les portraits"
+msgstr ""
+
+#: scout-codes.php:453
+#, php-format
+msgid ""
+"💡 <strong>Comment faire :</strong> 1) Téléchargez une image de Wikimedia "
+"Commons sur votre ordinateur. 2) Importez-la dans <a href=\"%s\">Médias → "
+"Ajouter</a>. 3) Copiez l'URL de l'image et collez-la ici."
+msgstr ""
+
+#: scout-codes.php:457
+msgid "Aperçu — Code du jour"
+msgstr ""
+
+#: scout-codes.php:462
+msgid "Pages générées"
+msgstr ""
+
+#: scout-codes.php:464
+msgid "Pages recréées! Visitez la page d'accueil pour déclencher la création."
+msgstr ""
+
+#: scout-codes.php:466
+msgid ""
+"Le plugin crée automatiquement une page par code scout. Si les pages ont été "
+"supprimées, vous pouvez les recréer."
+msgstr ""
+
+#: scout-codes.php:477
+msgid "page manquante"
+msgstr ""
+
+#: scout-codes.php:481
+msgid ""
+"Pages non encore créées. Elles seront créées automatiquement au prochain "
+"chargement d'une page admin."
+msgstr ""
+
+#: scout-codes.php:486
+msgid "Supprimer et recréer toutes les pages de codes?"
+msgstr ""
+
+#: scout-codes.php:486
+msgid "Recréer toutes les pages"
+msgstr ""
+
+#: scout-codes.php:504
+msgid "Points et tirets — le langage universel des scouts. Avec audio!"
+msgstr ""
+
+#: scout-codes.php:507
+msgid "Tic-Tac-Toc (Pigpen)"
+msgstr ""
+
+#: scout-codes.php:508
+msgid "Code géométrique caché dans une grille de morpion."
+msgstr ""
+
+#: scout-codes.php:509
+msgid "Sémaphore, Grec & Runes"
+msgstr ""
+
+#: scout-codes.php:510
+msgid "Drapeaux, alphabet grec et runes nordiques."
+msgstr ""
+
+#: scout-codes.php:511
+msgid "César & substitution"
+msgstr ""
+
+#: scout-codes.php:512
+msgid "Décalage de l'alphabet et substitutions personnalisées."
+msgstr ""
+
+#: scout-codes.php:514
+msgid "Chaque lettre en bits — le langage des ordinateurs."
+msgstr ""
+
+#: scout-codes.php:515
+msgid "Code téléphone"
+msgstr ""
+
+#: scout-codes.php:516
+msgid "Les lettres cachées dans le clavier du téléphone."
+msgstr ""
+
+#: scout-codes.php:517
+msgid "Code des Samouraïs"
+msgstr ""
+
+#: scout-codes.php:518
+msgid "Un code inspiré des guerriers japonais."
+msgstr ""
+
+#: scout-codes.php:519
+msgid "Code chinois"
+msgstr ""
+
+#: scout-codes.php:520
+msgid "Un code basé sur les traits des caractères chinois."
+msgstr ""
+
+#: scout-codes.php:521
+msgid "Code musical"
+msgstr ""
+
+#: scout-codes.php:522
+msgid "Les notes de musique cachent des messages."
+msgstr ""
+
+#: scout-codes.php:523
+msgid "Code à clé"
+msgstr ""
+
+#: scout-codes.php:524
+msgid "Un code qui utilise un mot-clé secret pour encoder."
+msgstr ""
+
+#: scout-codes.php:525
+msgid "Code inversé & avocat"
+msgstr ""
+
+#: scout-codes.php:526
+msgid "Miroir, inversions et codes d'avocat."
+msgstr ""
+
+#: scout-codes.php:527
+msgid "Code des deux grilles"
+msgstr ""
+
+#: scout-codes.php:528
+msgid "Deux grilles superposées pour un chiffrement visuel."
+msgstr ""
+
+#: scout-codes.php:529
+msgid "Code solaire"
+msgstr ""
+
+#: scout-codes.php:530
+msgid "Un code inspiré des cadrans solaires."
+msgstr ""
+
+#: scout-codes.php:576
+msgid "Accès refusé"
+msgstr ""
+
+#: scout-codes.php:595
+msgid "Codes & signes scouts"
+msgstr ""
+
+#: scout-codes.php:596
+msgid "Apprends les codes secrets utilisés par les scouts du monde entier!"
+msgstr ""
+
+#: scout-codes.php:603 scout-codes.php:642 scout-codes.php:661
+msgid "Tous les codes"
+msgstr ""
+
+#: scout-codes.php:629
+msgid "Code inconnu."
+msgstr ""
+
+#: scout-codes.php:634
+msgid "Fichier de contenu introuvable."
+msgstr ""

@@ -65,63 +65,67 @@ body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--txt)}
 <!-- ═══ ALPHABET INVERSÉ ═══ -->
 <div class="card">
   <div class="section-label">
-    <h3 style="color:var(--purple)">🔄 L'Alphabet Inversé</h3>
+    <h3 style="color:var(--purple)">🔄 <?php esc_html_e('L\'Alphabet Inversé', 'scout-codes'); ?></h3>
     <div class="line" style="background:linear-gradient(90deg,var(--purple),transparent)"></div>
   </div>
-  <p class="desc">On inverse simplement l'alphabet : A↔Z, B↔Y, C↔X, etc. Les lettres du milieu (M↔N) sont proches l'une de l'autre. Ce code est <strong>symétrique</strong> — encoder et décoder utilisent la même table!</p>
+  <p class="desc"><?php echo wp_kses(__('On inverse simplement l\'alphabet : A↔Z, B↔Y, C↔X, etc. Les lettres du milieu (M↔N) sont proches l\'une de l\'autre. Ce code est <strong>symétrique</strong> — encoder et décoder utilisent la même table!', 'scout-codes'), ['strong' => []]); ?></p>
 
   <div class="cipher-table" id="invTable"></div>
 
   <div class="tip">
-    <strong>💡 Astuce :</strong> Ce code est son propre inverse! Si vous encodez « BONJOUR » vous obtenez « YLMQLFI ». Si vous encodez « YLMQLFI » vous retrouvez « BONJOUR ». Pas besoin de décoder différemment!
+    <strong>💡 <?php esc_html_e('Astuce :', 'scout-codes'); ?></strong> <?php esc_html_e('Ce code est son propre inverse! Si vous encodez « BONJOUR » vous obtenez « YLMQLFI ». Si vous encodez « YLMQLFI » vous retrouvez « BONJOUR ». Pas besoin de décoder différemment!', 'scout-codes'); ?>
   </div>
 </div>
 
 <!-- ═══ CODE DE L'AVOCAT ═══ -->
 <div class="card">
   <div class="section-label">
-    <h3 style="color:var(--teal)">⚖️ Le Code de l'Avocat</h3>
+    <h3 style="color:var(--teal)">⚖️ <?php esc_html_e('Le Code de l\'Avocat', 'scout-codes'); ?></h3>
     <div class="line" style="background:linear-gradient(90deg,var(--teal),transparent)"></div>
   </div>
-  <p class="desc">Ce code tire son nom du fait que la lettre « A » vaut « K ». Chaque lettre est décalée de <strong>+10 positions</strong> dans l'alphabet (avec retour au début après Z).</p>
+  <p class="desc"><?php echo wp_kses(__('Ce code tire son nom du fait que la lettre « A » vaut « K ». Chaque lettre est décalée de <strong>+10 positions</strong> dans l\'alphabet (avec retour au début après Z).', 'scout-codes'), ['strong' => []]); ?></p>
 
   <div class="cipher-table" id="avoTable"></div>
 
   <div class="tip">
-    <strong>💡 Astuce :</strong> Pour décoder, il faut décaler de −10 (ou +16, ce qui revient au même). Ce code n'est PAS symétrique contrairement à l'Alphabet Inversé.
+    <strong>💡 <?php esc_html_e('Astuce :', 'scout-codes'); ?></strong> <?php esc_html_e('Pour décoder, il faut décaler de −10 (ou +16, ce qui revient au même). Ce code n\'est PAS symétrique contrairement à l\'Alphabet Inversé.', 'scout-codes'); ?>
   </div>
 </div>
 
 <!-- ═══ ENCODER ═══ -->
 <div class="card">
-  <h2 style="color:var(--purple)"><span class="icon" style="background:var(--purple)">⚡</span> Encodeur / Décodeur</h2>
+  <h2 style="color:var(--purple)"><span class="icon" style="background:var(--purple)">⚡</span> <?php esc_html_e('Encodeur / Décodeur', 'scout-codes'); ?></h2>
 
   <div class="code-toggle" id="codeToggle">
-    <button class="active-inv" onclick="setCode('inv',this)">🔄 Alphabet Inversé</button>
-    <button onclick="setCode('avo',this)">⚖️ Code de l'Avocat</button>
+    <button class="active-inv" onclick="setCode('inv',this)">🔄 <?php esc_html_e('Alphabet Inversé', 'scout-codes'); ?></button>
+    <button onclick="setCode('avo',this)">⚖️ <?php esc_html_e('Code de l\'Avocat', 'scout-codes'); ?></button>
   </div>
 
   <div class="dir-toggle">
-    <button class="active" onclick="setDir('encode',this)">Encoder</button>
-    <button onclick="setDir('decode',this)">Décoder</button>
+    <button class="active" onclick="setDir('encode',this)"><?php esc_html_e('Encoder', 'scout-codes'); ?></button>
+    <button onclick="setDir('decode',this)"><?php esc_html_e('Décoder', 'scout-codes'); ?></button>
   </div>
 
   <div class="encoder-input">
-    <textarea id="inputText" placeholder="Tapez votre message ici..." oninput="convert()"></textarea>
+    <textarea id="inputText" placeholder="<?php echo esc_attr__('Tapez votre message ici...', 'scout-codes'); ?>" oninput="convert()"></textarea>
   </div>
   <div class="btn-row">
-    <button class="btn btn-p" onclick="convert()">Convertir</button>
-    <button class="btn btn-o" onclick="clearAll()">Effacer</button>
-    <button class="btn btn-o" onclick="copyOutput()">📋 Copier</button>
+    <button class="btn btn-p" onclick="convert()"><?php esc_html_e('Convertir', 'scout-codes'); ?></button>
+    <button class="btn btn-o" onclick="clearAll()"><?php esc_html_e('Effacer', 'scout-codes'); ?></button>
+    <button class="btn btn-o" onclick="copyOutput()">📋 <?php esc_html_e('Copier', 'scout-codes'); ?></button>
   </div>
 
-  <div class="output-label" id="outLabel">MESSAGE CODÉ</div>
+  <div class="output-label" id="outLabel"><?php esc_html_e('MESSAGE CODÉ', 'scout-codes'); ?></div>
   <div class="output-box inv" id="output"></div>
 </div>
 </div>
 
 
 
+<script>var scL10n = <?php echo wp_json_encode([
+  'copie' => __('Copié!', 'scout-codes'),
+  'copier' => __('Copier', 'scout-codes'),
+]); ?>;</script>
 <script>
 const ALPHA = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
@@ -174,8 +178,8 @@ function convert() {
 function clearAll() { document.getElementById('inputText').value = ''; document.getElementById('output').textContent = ''; }
 function copyOutput() {
   navigator.clipboard.writeText(document.getElementById('output').textContent).then(() => {
-    event.target.textContent = '✅ Copié!';
-    setTimeout(() => event.target.textContent = '📋 Copier', 1500);
+    event.target.textContent = '✅ ' + scL10n.copie;
+    setTimeout(() => event.target.textContent = '📋 ' + scL10n.copier, 1500);
   });
 }
 

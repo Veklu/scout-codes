@@ -37,30 +37,33 @@ textarea.enc:focus{outline:none;border-color:var(--purple);box-shadow:0 0 0 3px 
 </div>
 <div class="container">
 <div class="card">
-  <h2>Comment ça marche?</h2>
-  <p class="desc">Chaque lettre est représentée par une cellule de <strong>2 colonnes × 3 rangées</strong> (6 positions). Les gros points sont en relief (remplis), les petits sont absents (vides). Pour les chiffres, on ajoute un préfixe spécial ⠼ devant les lettres A(=1) à J(=0).</p>
+  <h2><?php esc_html_e('Comment ça marche?', 'scout-codes'); ?></h2>
+  <p class="desc"><?php echo wp_kses(__('Chaque lettre est représentée par une cellule de <strong>2 colonnes × 3 rangées</strong> (6 positions). Les gros points sont en relief (remplis), les petits sont absents (vides). Pour les chiffres, on ajoute un préfixe spécial ⠼ devant les lettres A(=1) à J(=0).', 'scout-codes'), ['strong' => []]); ?></p>
   <div class="legend">
-    <strong>Positions dans la cellule :</strong><br>
+    <strong><?php esc_html_e('Positions dans la cellule :', 'scout-codes'); ?></strong><br>
     ① ④<br>② ⑤<br>③ ⑥<br><br>
-    Seuls les gros points sont imprimés. Les petits points sont donnés ici pour référence seulement.
+    <?php esc_html_e('Seuls les gros points sont imprimés. Les petits points sont donnés ici pour référence seulement.', 'scout-codes'); ?>
   </div>
-  <div class="output-label">ALPHABET — CLIQUEZ POUR AJOUTER</div>
+  <div class="output-label"><?php esc_html_e('ALPHABET — CLIQUEZ POUR AJOUTER', 'scout-codes'); ?></div>
   <div class="braille-grid" id="brailleGrid"></div>
 </div>
 <div class="card">
-  <h2>✏️ Encodeur</h2>
-  <textarea class="enc" id="inp" placeholder="Tapez votre message..." oninput="encode()"></textarea>
+  <h2>✏️ <?php esc_html_e('Encodeur', 'scout-codes'); ?></h2>
+  <textarea class="enc" id="inp" placeholder="<?php echo esc_attr__('Tapez votre message...', 'scout-codes'); ?>" oninput="encode()"></textarea>
   <div class="btn-row">
-    <button class="btn btn-p" onclick="encode()">Encoder</button>
-    <button class="btn btn-o" onclick="document.getElementById('inp').value='';document.getElementById('out').innerHTML=''">Effacer</button>
-    <button class="btn btn-o" onclick="exportSVG()">📥 Exporter SVG</button>
-    <button class="btn btn-o" onclick="exportTxt()">💾 Exporter .txt</button>
+    <button class="btn btn-p" onclick="encode()"><?php esc_html_e('Encoder', 'scout-codes'); ?></button>
+    <button class="btn btn-o" onclick="document.getElementById('inp').value='';document.getElementById('out').innerHTML=''"><?php esc_html_e('Effacer', 'scout-codes'); ?></button>
+    <button class="btn btn-o" onclick="exportSVG()">📥 <?php esc_html_e('Exporter SVG', 'scout-codes'); ?></button>
+    <button class="btn btn-o" onclick="exportTxt()">💾 <?php esc_html_e('Exporter .txt', 'scout-codes'); ?></button>
   </div>
-  <div class="output-label">BRAILLE</div>
+  <div class="output-label"><?php esc_html_e('BRAILLE', 'scout-codes'); ?></div>
   <div class="braille-output" id="out"></div>
 </div>
 </div>
 
+<script>var scL10n = <?php echo wp_json_encode([
+  'original' => __('Original:', 'scout-codes'),
+]); ?>;</script>
 <script>
 // Braille: 2x3 grid, positions:
 // 1 4
@@ -161,7 +164,7 @@ function exportTxt() {
     var ch = input[i];
     brailleStr += ch === ' ' ? ' ' : (UNICODE[ch] || ch);
   }
-  var content = 'ALPHABET BRAILLE\n\nOriginal: ' + input + '\nBraille Unicode: ' + brailleStr + '\n';
+  var content = 'ALPHABET BRAILLE\n\n' + scL10n.original + ' ' + input + '\nBraille Unicode: ' + brailleStr + '\n';
   var a = document.createElement('a');
   a.href = URL.createObjectURL(new Blob([content], {type: 'text/plain; charset=utf-8'}));
   a.download = 'message-braille.txt';

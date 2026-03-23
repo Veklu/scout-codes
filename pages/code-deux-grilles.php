@@ -72,23 +72,23 @@ body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--txt)}
 
 <!-- EXPLANATION -->
 <div class="card">
-  <h2>Comment ça marche?</h2>
-  <p class="desc">Les 26 lettres sont réparties dans deux grilles en # (3×3) et un X. Chaque lettre est représentée par la <strong>forme de son compartiment</strong> dans la grille, plus des <strong>points</strong> pour sa position (1er = aucun point, 2e = 1 point, 3e = 2 points).</p>
+  <h2><?php esc_html_e('Comment ça marche?', 'scout-codes'); ?></h2>
+  <p class="desc"><?php echo wp_kses(__('Les 26 lettres sont réparties dans deux grilles en # (3×3) et un X. Chaque lettre est représentée par la <strong>forme de son compartiment</strong> dans la grille, plus des <strong>points</strong> pour sa position (1er = aucun point, 2e = 1 point, 3e = 2 points).', 'scout-codes'), ['strong' => []]); ?></p>
 
   <div class="ref-layout">
     <!-- Grid 1: no dots -->
     <div>
-      <div style="text-align:center;font-weight:700;color:var(--g);margin-bottom:8px;font-size:13px">Grille # (sans point)</div>
+      <div style="text-align:center;font-weight:700;color:var(--g);margin-bottom:8px;font-size:13px"><?php esc_html_e('Grille # (sans point)', 'scout-codes'); ?></div>
       <div class="ref-grid" id="grid1"></div>
     </div>
     <!-- Grid 2: with dots -->
     <div>
-      <div style="text-align:center;font-weight:700;color:var(--g);margin-bottom:8px;font-size:13px">Grille # (avec point)</div>
+      <div style="text-align:center;font-weight:700;color:var(--g);margin-bottom:8px;font-size:13px"><?php esc_html_e('Grille # (avec point)', 'scout-codes'); ?></div>
       <div class="ref-grid" id="grid2"></div>
     </div>
     <!-- X grid -->
     <div>
-      <div style="text-align:center;font-weight:700;color:var(--g);margin-bottom:8px;font-size:13px">Grille X</div>
+      <div style="text-align:center;font-weight:700;color:var(--g);margin-bottom:8px;font-size:13px"><?php esc_html_e('Grille X', 'scout-codes'); ?></div>
       <div class="x-grid" id="xGrid">
         <svg width="200" height="200" style="position:absolute;top:0;left:0">
           <line x1="0" y1="0" x2="200" y2="200" stroke="var(--txt)" stroke-width="3"/>
@@ -99,45 +99,48 @@ body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--txt)}
   </div>
 
   <div class="example">
-    <h3>📝 Exemple: MIEUX</h3>
-    <p>M = grille 2, centre-gauche (avec point) · I = grille 1, bas-droite · E = grille 1, centre-centre · U = grille 2, bas-centre · X = grille X, droite (avec point)</p>
+    <h3>📝 <?php esc_html_e('Exemple: MIEUX', 'scout-codes'); ?></h3>
+    <p><?php esc_html_e('M = grille 2, centre-gauche (avec point) · I = grille 1, bas-droite · E = grille 1, centre-centre · U = grille 2, bas-centre · X = grille X, droite (avec point)', 'scout-codes'); ?></p>
     <div class="example-symbols" id="exampleMieux"></div>
   </div>
 </div>
 
 <!-- INTERACTIVE ENCODER -->
 <div class="card">
-  <h2>✏️ Créez votre message secret</h2>
-  <p class="desc">Tapez du texte ou cliquez sur les lettres ci-dessous pour générer les symboles Deux Grilles.</p>
+  <h2>✏️ <?php esc_html_e('Créez votre message secret', 'scout-codes'); ?></h2>
+  <p class="desc"><?php esc_html_e('Tapez du texte ou cliquez sur les lettres ci-dessous pour générer les symboles Deux Grilles.', 'scout-codes'); ?></p>
 
   <div class="encoder-input">
-    <textarea id="inputText" placeholder="Tapez votre message ici..." oninput="encode()"></textarea>
+    <textarea id="inputText" placeholder="<?php echo esc_attr__('Tapez votre message ici...', 'scout-codes'); ?>" oninput="encode()"></textarea>
   </div>
   <div class="btn-row">
-    <button class="btn btn-g" onclick="encode()">Encoder</button>
-    <button class="btn btn-o" onclick="clearAll()">Effacer</button>
-    <button class="btn btn-o" onclick="downloadSVG()">📥 Télécharger SVG</button>
+    <button class="btn btn-g" onclick="encode()"><?php esc_html_e('Encoder', 'scout-codes'); ?></button>
+    <button class="btn btn-o" onclick="clearAll()"><?php esc_html_e('Effacer', 'scout-codes'); ?></button>
+    <button class="btn btn-o" onclick="downloadSVG()">📥 <?php esc_html_e('Télécharger SVG', 'scout-codes'); ?></button>
   </div>
 
-  <div class="output-label">MESSAGE ENCODÉ</div>
-  <div class="output-area" id="output"><div class="placeholder">Votre message apparaîtra ici en symboles...</div></div>
+  <div class="output-label"><?php esc_html_e('MESSAGE ENCODÉ', 'scout-codes'); ?></div>
+  <div class="output-area" id="output"><div class="placeholder"><?php esc_html_e('Votre message apparaîtra ici en symboles...', 'scout-codes'); ?></div></div>
 
   <div style="margin-top:20px">
-    <div class="output-label">CLIQUEZ POUR AJOUTER</div>
+    <div class="output-label"><?php esc_html_e('CLIQUEZ POUR AJOUTER', 'scout-codes'); ?></div>
     <div class="alpha-small" id="alphaClickGrid"></div>
   </div>
 </div>
 
 <!-- DECODER -->
 <div class="card">
-  <h2>🔍 Décodeur</h2>
-  <p class="desc">Entrez le texte encodé en lettres et voyez le résultat — ou utilisez l'encodeur ci-dessus et lisez les lettres sous chaque symbole.</p>
+  <h2>🔍 <?php esc_html_e('Décodeur', 'scout-codes'); ?></h2>
+  <p class="desc"><?php esc_html_e('Entrez le texte encodé en lettres et voyez le résultat — ou utilisez l\'encodeur ci-dessus et lisez les lettres sous chaque symbole.', 'scout-codes'); ?></p>
 </div>
 
 </div>
 
 
 
+<script>var scL10n = <?php echo wp_json_encode([
+  'messageApparaitra' => __('Votre message apparaîtra ici en symboles...', 'scout-codes'),
+]); ?>;</script>
 <script>
 // Pigpen cipher mapping
 // Grid 1 (no dots): A-I, Grid 2 (dots): J-R, X grid: S-Z
@@ -318,7 +321,7 @@ function encode() {
   const output = document.getElementById('output');
 
   if (!input.trim()) {
-    output.innerHTML = '<div class="placeholder">Votre message apparaîtra ici en symboles...</div>';
+    output.innerHTML = '<div class="placeholder">' + scL10n.messageApparaitra + '</div>';
     output.classList.remove('active');
     return;
   }
@@ -342,7 +345,7 @@ function encode() {
 
 function clearAll() {
   document.getElementById('inputText').value = '';
-  document.getElementById('output').innerHTML = '<div class="placeholder">Votre message apparaîtra ici en symboles...</div>';
+  document.getElementById('output').innerHTML = '<div class="placeholder">' + scL10n.messageApparaitra + '</div>';
   document.getElementById('output').classList.remove('active');
 }
 

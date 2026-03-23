@@ -38,29 +38,38 @@ textarea.enc:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rg
 </div>
 <div class="container">
 <div class="card">
-  <h2>Table ASCII</h2>
-  <p class="desc">Ce code est utilisé en informatique. Chaque lettre a une valeur en <strong>décimal</strong> (DEC), <strong>hexadécimal</strong> (HEX) et <strong>binaire</strong> (BIN). Cliquez sur un caractère pour l'ajouter à votre message.</p>
+  <h2><?php esc_html_e('Table ASCII', 'scout-codes'); ?></h2>
+  <p class="desc"><?php echo wp_kses(__('Ce code est utilisé en informatique. Chaque lettre a une valeur en <strong>décimal</strong> (DEC), <strong>hexadécimal</strong> (HEX) et <strong>binaire</strong> (BIN). Cliquez sur un caractère pour l\'ajouter à votre message.', 'scout-codes'), ['strong' => []]); ?></p>
   <div class="ascii-table" id="asciiTable"></div>
 </div>
 <div class="card">
-  <h2>✏️ Encodeur</h2>
-  <textarea class="enc" id="inp" placeholder="Tapez votre message..." oninput="encode()"></textarea>
+  <h2>✏️ <?php esc_html_e('Encodeur', 'scout-codes'); ?></h2>
+  <textarea class="enc" id="inp" placeholder="<?php echo esc_attr__('Tapez votre message...', 'scout-codes'); ?>" oninput="encode()"></textarea>
   <div class="mode-toggle" id="modeToggle">
-    <button class="active" data-mode="dec">Décimal</button>
-    <button data-mode="hex">Hexadécimal</button>
-    <button data-mode="bin">Binaire</button>
+    <button class="active" data-mode="dec"><?php esc_html_e('Décimal', 'scout-codes'); ?></button>
+    <button data-mode="hex"><?php esc_html_e('Hexadécimal', 'scout-codes'); ?></button>
+    <button data-mode="bin"><?php esc_html_e('Binaire', 'scout-codes'); ?></button>
   </div>
   <div class="btn-row">
-    <button class="btn btn-b" onclick="encode()">Encoder</button>
-    <button class="btn btn-o" onclick="document.getElementById('inp').value='';document.getElementById('out').textContent=''">Effacer</button>
-    <button class="btn btn-o" id="copyBtn" onclick="copyOut()">📋 Copier</button>
-    <button class="btn btn-o" onclick="exportTxt()">💾 Exporter .txt</button>
+    <button class="btn btn-b" onclick="encode()"><?php esc_html_e('Encoder', 'scout-codes'); ?></button>
+    <button class="btn btn-o" onclick="document.getElementById('inp').value='';document.getElementById('out').textContent=''"><?php esc_html_e('Effacer', 'scout-codes'); ?></button>
+    <button class="btn btn-o" id="copyBtn" onclick="copyOut()">📋 <?php esc_html_e('Copier', 'scout-codes'); ?></button>
+    <button class="btn btn-o" onclick="exportTxt()">💾 <?php esc_html_e('Exporter .txt', 'scout-codes'); ?></button>
   </div>
-  <div class="output-label" id="outLabel">DÉCIMAL</div>
+  <div class="output-label" id="outLabel"><?php esc_html_e('DÉCIMAL', 'scout-codes'); ?></div>
   <div class="output-box" id="out"></div>
 </div>
 </div>
 
+<script>var scL10n = <?php echo wp_json_encode([
+  'decimal' => __('DÉCIMAL', 'scout-codes'),
+  'hexadecimal' => __('HEXADÉCIMAL', 'scout-codes'),
+  'binaire' => __('BINAIRE', 'scout-codes'),
+  'copie' => __('Copié!', 'scout-codes'),
+  'copier' => __('Copier', 'scout-codes'),
+  'original' => __('Original:', 'scout-codes'),
+  'encode' => __('Encodé:', 'scout-codes'),
+]); ?>;</script>
 <script>
 var mode = 'dec';
 
@@ -77,7 +86,7 @@ function encode() {
   var input = document.getElementById('inp').value.toUpperCase();
   var out = document.getElementById('out');
   var label = document.getElementById('outLabel');
-  label.textContent = mode === 'dec' ? 'DÉCIMAL' : mode === 'hex' ? 'HEXADÉCIMAL' : 'BINAIRE';
+  label.textContent = mode === 'dec' ? scL10n.decimal : mode === 'hex' ? scL10n.hexadecimal : scL10n.binaire;
   if (!input.trim()) { out.textContent = ''; return; }
   var parts = [];
   for (var i = 0; i < input.length; i++) {
@@ -109,15 +118,15 @@ chars.forEach(function(code) {
 function copyOut() {
   navigator.clipboard.writeText(document.getElementById('out').textContent).then(function() {
     var btn = document.getElementById('copyBtn');
-    btn.textContent = '✅ Copié!';
-    setTimeout(function() { btn.textContent = '📋 Copier'; }, 1500);
+    btn.textContent = '✅ ' + scL10n.copie;
+    setTimeout(function() { btn.textContent = '📋 ' + scL10n.copier; }, 1500);
   });
 }
 
 function exportTxt() {
   var input = document.getElementById('inp').value;
   var output = document.getElementById('out').textContent;
-  var content = 'CODE ASCII\nMode: ' + mode + '\n\nOriginal: ' + input + '\nEncodé: ' + output + '\n';
+  var content = 'CODE ASCII\nMode: ' + mode + '\n\n' + scL10n.original + ' ' + input + '\n' + scL10n.encode + ' ' + output + '\n';
   var a = document.createElement('a');
   a.href = URL.createObjectURL(new Blob([content], {type: 'text/plain'}));
   a.download = 'message-ascii.txt';

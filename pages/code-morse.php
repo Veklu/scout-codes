@@ -90,33 +90,33 @@ body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--txt)}
 
 <!-- MNEMONIC TIP -->
 <div class="mnemonic">
-  <h3>💡 Truc pour mémoriser</h3>
-  <p>Chaque lettre a un mot-clé. Dans ce mot, chaque <span class="tip">voyelle = point ·</span> et chaque <span class="tip">consonne = trait —</span>.<br>
-  Exemple: A = « as » → voyelle + consonne → <strong>· —</strong><br>
-  C = « coco » → consonne voyelle consonne voyelle → <strong>— · — ·</strong></p>
+  <h3>💡 <?php esc_html_e('Truc pour mémoriser', 'scout-codes'); ?></h3>
+  <p><?php esc_html_e('Chaque lettre a un mot-clé. Dans ce mot, chaque', 'scout-codes'); ?> <span class="tip"><?php esc_html_e('voyelle = point ·', 'scout-codes'); ?></span> <?php esc_html_e('et chaque', 'scout-codes'); ?> <span class="tip"><?php esc_html_e('consonne = trait —', 'scout-codes'); ?></span>.<br>
+  <?php esc_html_e('Exemple: A = « as » → voyelle + consonne →', 'scout-codes'); ?> <strong>· —</strong><br>
+  <?php esc_html_e('C = « coco » → consonne voyelle consonne voyelle →', 'scout-codes'); ?> <strong>— · — ·</strong></p>
 </div>
 
 <!-- ENCODER / DECODER -->
 <div class="encoder">
-  <h2><span class="icon">⚡</span> Encodeur / Décodeur</h2>
+  <h2><span class="icon">⚡</span> <?php esc_html_e('Encodeur / Décodeur', 'scout-codes'); ?></h2>
 
   <div class="direction-toggle">
-    <button class="active" onclick="setDirection('encode',this)">Texte → Morse</button>
-    <button onclick="setDirection('decode',this)">Morse → Texte</button>
+    <button class="active" onclick="setDirection('encode',this)"><?php esc_html_e('Texte → Morse', 'scout-codes'); ?></button>
+    <button onclick="setDirection('decode',this)"><?php esc_html_e('Morse → Texte', 'scout-codes'); ?></button>
   </div>
 
   <div class="input-row">
-    <textarea id="inputText" placeholder="Tapez votre message ici..." oninput="convert()"></textarea>
+    <textarea id="inputText" placeholder="<?php echo esc_attr__('Tapez votre message ici...', 'scout-codes'); ?>" oninput="convert()"></textarea>
   </div>
 
   <div class="btn-group">
-    <button class="btn btn-primary" onclick="convert()">Convertir</button>
-    <button class="btn btn-gold" onclick="playMorse()">🔊 Écouter</button>
-    <button class="btn btn-outline" onclick="clearAll()">Effacer</button>
-    <button class="btn btn-outline" onclick="copyOutput()">📋 Copier</button>
+    <button class="btn btn-primary" onclick="convert()"><?php esc_html_e('Convertir', 'scout-codes'); ?></button>
+    <button class="btn btn-gold" onclick="playMorse()">🔊 <?php esc_html_e('Écouter', 'scout-codes'); ?></button>
+    <button class="btn btn-outline" onclick="clearAll()"><?php esc_html_e('Effacer', 'scout-codes'); ?></button>
+    <button class="btn btn-outline" onclick="copyOutput()">📋 <?php esc_html_e('Copier', 'scout-codes'); ?></button>
   </div>
 
-  <div class="output-label" id="outputLabel">MORSE</div>
+  <div class="output-label" id="outputLabel"><?php esc_html_e('MORSE', 'scout-codes'); ?></div>
   <div class="output-box" id="output"><span class="cursor"></span></div>
 
   <div class="sound-bar" id="soundBar"></div>
@@ -124,12 +124,12 @@ body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--txt)}
 
 <!-- ALPHABET CHART -->
 <div class="chart">
-  <h2>Alphabet Morse complet</h2>
-  <p class="subtitle">Cliquez sur une lettre pour l'ajouter à votre message</p>
+  <h2><?php esc_html_e('Alphabet Morse complet', 'scout-codes'); ?></h2>
+  <p class="subtitle"><?php esc_html_e('Cliquez sur une lettre pour l\'ajouter à votre message', 'scout-codes'); ?></p>
 
   <div class="alpha-grid" id="alphaGrid"></div>
 
-  <h3 style="color:var(--g);margin-top:24px;font-family:'Bitter',serif">Chiffres</h3>
+  <h3 style="color:var(--g);margin-top:24px;font-family:'Bitter',serif"><?php esc_html_e('Chiffres', 'scout-codes'); ?></h3>
   <div class="num-grid" id="numGrid"></div>
 </div>
 
@@ -137,6 +137,14 @@ body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--txt)}
 
 
 
+<script>var scL10n = <?php echo wp_json_encode([
+  'tapezMessage' => __('Tapez votre message ici...', 'scout-codes'),
+  'collezMorse' => __('Collez du morse ici (séparez les lettres par des espaces, les mots par /)...', 'scout-codes'),
+  'morse' => __('MORSE', 'scout-codes'),
+  'texte' => __('TEXTE', 'scout-codes'),
+  'copie' => __('Copié!', 'scout-codes'),
+  'copier' => __('Copier', 'scout-codes'),
+]); ?>;</script>
 <script>
 const MORSE = {
   'A':'·—','B':'—···','C':'—·—·','D':'—··','E':'·','F':'··—·',
@@ -166,9 +174,9 @@ function setDirection(dir, btn) {
   document.querySelectorAll('.direction-toggle button').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   document.getElementById('inputText').placeholder = dir === 'encode'
-    ? 'Tapez votre message ici...'
-    : 'Collez du morse ici (séparez les lettres par des espaces, les mots par /)...';
-  document.getElementById('outputLabel').textContent = dir === 'encode' ? 'MORSE' : 'TEXTE';
+    ? scL10n.tapezMessage
+    : scL10n.collezMorse;
+  document.getElementById('outputLabel').textContent = dir === 'encode' ? scL10n.morse : scL10n.texte;
   convert();
 }
 
@@ -201,8 +209,8 @@ function copyOutput() {
   const text = document.getElementById('output').textContent;
   navigator.clipboard.writeText(text).then(() => {
     const btn = event.target;
-    btn.textContent = '✅ Copié!';
-    setTimeout(() => btn.textContent = '📋 Copier', 1500);
+    btn.textContent = '✅ ' + scL10n.copie;
+    setTimeout(() => btn.textContent = '📋 ' + scL10n.copier, 1500);
   });
 }
 

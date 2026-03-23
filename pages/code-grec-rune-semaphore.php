@@ -47,26 +47,26 @@ textarea.enc:focus{outline:none;border-color:var(--g);box-shadow:0 0 0 3px rgba(
 
 <!-- ═══ GREC / CYRILLIQUE ═══ -->
 <div class="card">
-  <h2>🏛️ Alphabet Grec et Cyrillique</h2>
-  <p class="desc">On remplace chaque lettre latine par son équivalent grec (GR.) ou cyrillique russe (CYR.). C'est un code de substitution visuel — le message semble être dans une autre langue (p. 140).</p>
+  <h2>🏛️ <?php esc_html_e('Alphabet Grec et Cyrillique', 'scout-codes'); ?></h2>
+  <p class="desc"><?php esc_html_e('On remplace chaque lettre latine par son équivalent grec (GR.) ou cyrillique russe (CYR.). C\'est un code de substitution visuel — le message semble être dans une autre langue (p. 140).', 'scout-codes'); ?></p>
 
   <div style="display:flex;gap:24px;flex-wrap:wrap">
     <div style="flex:1;min-width:250px">
-      <div class="output-label">ALPHABET GREC</div>
+      <div class="output-label"><?php esc_html_e('ALPHABET GREC', 'scout-codes'); ?></div>
       <div class="alpha-table" id="greekTable"></div>
     </div>
     <div style="flex:1;min-width:250px">
-      <div class="output-label">ALPHABET CYRILLIQUE</div>
+      <div class="output-label"><?php esc_html_e('ALPHABET CYRILLIQUE', 'scout-codes'); ?></div>
       <div class="alpha-table" id="cyrTable"></div>
     </div>
   </div>
 
-  <textarea class="enc" id="grcInput" placeholder="Tapez votre message..." oninput="encodeGrc()"></textarea>
+  <textarea class="enc" id="grcInput" placeholder="<?php echo esc_attr__('Tapez votre message...', 'scout-codes'); ?>" oninput="encodeGrc()"></textarea>
   <div class="btn-row">
-    <button class="btn btn-g" onclick="grcMode='gr';encodeGrc()">Grec</button>
-    <button class="btn btn-o" onclick="grcMode='cyr';encodeGrc()">Cyrillique</button>
+    <button class="btn btn-g" onclick="grcMode='gr';encodeGrc()"><?php esc_html_e('Grec', 'scout-codes'); ?></button>
+    <button class="btn btn-o" onclick="grcMode='cyr';encodeGrc()"><?php esc_html_e('Cyrillique', 'scout-codes'); ?></button>
   </div>
-  <div class="output-label" id="grcLabel">GREC</div>
+  <div class="output-label" id="grcLabel"><?php esc_html_e('GREC', 'scout-codes'); ?></div>
   <div class="output-box" id="grcOut"></div>
 </div>
 
@@ -74,14 +74,14 @@ textarea.enc:focus{outline:none;border-color:var(--g);box-shadow:0 0 0 3px rgba(
 
 <!-- ═══ RUNIQUE ═══ -->
 <div class="card">
-  <h2>ᚱ L'Alphabet Runique (Viking)</h2>
-  <p class="desc">Les runes sont l'écriture des anciens peuples nordiques (Vikings). Chaque lettre latine a un équivalent runique. Parfait pour les messages mystérieux! (p. 143)</p>
+  <h2>ᚱ <?php esc_html_e('L\'Alphabet Runique (Viking)', 'scout-codes'); ?></h2>
+  <p class="desc"><?php esc_html_e('Les runes sont l\'écriture des anciens peuples nordiques (Vikings). Chaque lettre latine a un équivalent runique. Parfait pour les messages mystérieux! (p. 143)', 'scout-codes'); ?></p>
 
   <div class="alpha-table" id="runeTable"></div>
 
-  <textarea class="enc" id="runeInput" placeholder="Tapez votre message..." oninput="encodeRune()"></textarea>
-  <div class="btn-row"><button class="btn btn-g" onclick="encodeRune()">Encoder</button><button class="btn btn-o" onclick="document.getElementById('runeInput').value='';document.getElementById('runeOut').textContent=''">Effacer</button></div>
-  <div class="output-label">RUNES</div>
+  <textarea class="enc" id="runeInput" placeholder="<?php echo esc_attr__('Tapez votre message...', 'scout-codes'); ?>" oninput="encodeRune()"></textarea>
+  <div class="btn-row"><button class="btn btn-g" onclick="encodeRune()"><?php esc_html_e('Encoder', 'scout-codes'); ?></button><button class="btn btn-o" onclick="document.getElementById('runeInput').value='';document.getElementById('runeOut').textContent=''"><?php esc_html_e('Effacer', 'scout-codes'); ?></button></div>
+  <div class="output-label"><?php esc_html_e('RUNES', 'scout-codes'); ?></div>
   <div class="output-box" id="runeOut" style="font-size:28px;letter-spacing:8px"></div>
 </div>
 
@@ -89,20 +89,24 @@ textarea.enc:focus{outline:none;border-color:var(--g);box-shadow:0 0 0 3px rgba(
 
 <!-- ═══ SÉMAPHORE ═══ -->
 <div class="card">
-  <h2>🚩 Le Code du Sémaphore</h2>
-  <p class="desc">Le code est interprété comme si on voyait quelqu'un qui agite deux drapeaux de face. Le bras droit et le bras gauche prennent différentes positions pour former chaque lettre. Utilisez du tissu blanc et rouge pour être vu de loin (p. 141).</p>
+  <h2>🚩 <?php esc_html_e('Le Code du Sémaphore', 'scout-codes'); ?></h2>
+  <p class="desc"><?php esc_html_e('Le code est interprété comme si on voyait quelqu\'un qui agite deux drapeaux de face. Le bras droit et le bras gauche prennent différentes positions pour former chaque lettre. Utilisez du tissu blanc et rouge pour être vu de loin (p. 141).', 'scout-codes'); ?></p>
 
   <div class="sem-grid" id="semGrid"></div>
 
-  <textarea class="enc" id="semInput" placeholder="Tapez votre message..." oninput="encodeSem()"></textarea>
-  <div class="btn-row"><button class="btn btn-g" onclick="encodeSem()">Encoder</button><button class="btn btn-o" onclick="document.getElementById('semInput').value='';document.getElementById('semOut').innerHTML=''">Effacer</button></div>
-  <div class="output-label">SÉMAPHORE</div>
+  <textarea class="enc" id="semInput" placeholder="<?php echo esc_attr__('Tapez votre message...', 'scout-codes'); ?>" oninput="encodeSem()"></textarea>
+  <div class="btn-row"><button class="btn btn-g" onclick="encodeSem()"><?php esc_html_e('Encoder', 'scout-codes'); ?></button><button class="btn btn-o" onclick="document.getElementById('semInput').value='';document.getElementById('semOut').innerHTML=''"><?php esc_html_e('Effacer', 'scout-codes'); ?></button></div>
+  <div class="output-label"><?php esc_html_e('SÉMAPHORE', 'scout-codes'); ?></div>
   <div class="sem-output" id="semOut"></div>
 </div>
 
 </div>
 
 
+<script>var scL10n = <?php echo wp_json_encode([
+  'grec' => __('GREC', 'scout-codes'),
+  'cyrillique' => __('CYRILLIQUE', 'scout-codes'),
+]); ?>;</script>
 <script>
 // ═══ GREC / CYRILLIQUE ═══
 const GREEK = {A:'Α',B:'Β',C:'-',D:'Δ',E:'Ε',F:'Φ',G:'Γ',H:'Η',I:'Ι',J:'-',K:'Κ',L:'Λ',M:'Μ',N:'Ν',O:'Ο',P:'Π',Q:'Θ',R:'Ρ',S:'Σ',T:'Τ',U:'Υ',V:'-',W:'-',X:'Ξ',Y:'Ψ',Z:'Ζ'};
@@ -114,7 +118,7 @@ let grcMode = 'gr';
 function encodeGrc() {
   const input = document.getElementById('grcInput').value.toUpperCase();
   const out = document.getElementById('grcOut');
-  document.getElementById('grcLabel').textContent = grcMode === 'gr' ? 'GREC' : 'CYRILLIQUE';
+  document.getElementById('grcLabel').textContent = grcMode === 'gr' ? scL10n.grec : scL10n.cyrillique;
   const map = grcMode === 'gr' ? GREEK : CYR;
   out.textContent = input.split('').map(ch => ch === ' ' ? '  ' : (map[ch] || ch)).join('');
 }

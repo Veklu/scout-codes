@@ -37,38 +37,46 @@ input.key-input:focus{outline:none;border-color:var(--g);box-shadow:0 0 0 3px rg
 </div>
 <div class="container">
   <div class="card">
-    <h2>Comment ça marche?</h2>
-    <p class="desc">On utilise une <strong>clé numérique</strong> (ex: 321) qui décale chaque lettre d'un montant différent en cycle. La 1re lettre est décalée de +3, la 2e de +2, la 3e de +1, puis on recommence : la 4e de +3, etc. Sans la clé, le message est indéchiffrable!</p>
+    <h2><?php esc_html_e('Comment ça marche?', 'scout-codes'); ?></h2>
+    <p class="desc"><?php echo wp_kses(__('On utilise une <strong>clé numérique</strong> (ex: 321) qui décale chaque lettre d\'un montant différent en cycle. La 1re lettre est décalée de +3, la 2e de +2, la 3e de +1, puis on recommence : la 4e de +3, etc. Sans la clé, le message est indéchiffrable!', 'scout-codes'), ['strong' => []]); ?></p>
     <div class="legend">
-      <strong>Exemple :</strong> Message « AKELA VA » avec clé <strong>321</strong><br>
+      <strong><?php esc_html_e('Exemple :', 'scout-codes'); ?></strong> <?php echo wp_kses(__('Message « AKELA VA » avec clé <strong>321</strong>', 'scout-codes'), ['strong' => []]); ?><br>
       A(+3)=D · K(+2)=M · E(+1)=F · L(+3)=O · A(+2)=C · V(+1)=W · A(+3)=D<br>
-      → Message transmis : <strong>DMFOC WD</strong><br><br>
-      ⚠️ Pour décoder, il faut faire −3, −2, −1 (l'inverse).
+      → <?php echo wp_kses(__('Message transmis : <strong>DMFOC WD</strong>', 'scout-codes'), ['strong' => []]); ?><br><br>
+      ⚠️ <?php esc_html_e('Pour décoder, il faut faire −3, −2, −1 (l\'inverse).', 'scout-codes'); ?>
     </div>
   </div>
   <div class="card">
-    <h2>⚡ Encodeur / Décodeur</h2>
+    <h2>⚡ <?php esc_html_e('Encodeur / Décodeur', 'scout-codes'); ?></h2>
     <div style="margin-bottom:12px">
-      <div class="output-label">CLÉ NUMÉRIQUE</div>
+      <div class="output-label"><?php esc_html_e('CLÉ NUMÉRIQUE', 'scout-codes'); ?></div>
       <input type="text" class="key-input" id="keyInput" placeholder="321" value="321" oninput="go()">
     </div>
     <div class="dir-toggle" id="dirToggle">
-      <button class="active" data-dir="encode">Encoder (+)</button>
-      <button data-dir="decode">Décoder (−)</button>
+      <button class="active" data-dir="encode"><?php esc_html_e('Encoder (+)', 'scout-codes'); ?></button>
+      <button data-dir="decode"><?php esc_html_e('Décoder (−)', 'scout-codes'); ?></button>
     </div>
     <textarea class="enc" id="inp" placeholder="AKELA VA" oninput="go()"></textarea>
     <div class="btn-row">
-      <button class="btn btn-g" onclick="go()">Convertir</button>
-      <button class="btn btn-o" onclick="clearAll()">Effacer</button>
-      <button class="btn btn-o" id="copyBtn" onclick="copyOut()">📋 Copier</button>
-      <button class="btn btn-o" onclick="exportTxt()">💾 Exporter .txt</button>
+      <button class="btn btn-g" onclick="go()"><?php esc_html_e('Convertir', 'scout-codes'); ?></button>
+      <button class="btn btn-o" onclick="clearAll()"><?php esc_html_e('Effacer', 'scout-codes'); ?></button>
+      <button class="btn btn-o" id="copyBtn" onclick="copyOut()">📋 <?php esc_html_e('Copier', 'scout-codes'); ?></button>
+      <button class="btn btn-o" onclick="exportTxt()">💾 <?php esc_html_e('Exporter .txt', 'scout-codes'); ?></button>
     </div>
-    <div class="output-label">RÉSULTAT</div>
+    <div class="output-label"><?php esc_html_e('RÉSULTAT', 'scout-codes'); ?></div>
     <div class="output-box" id="out"></div>
     <div class="breakdown" id="brk"></div>
   </div>
 </div>
 
+<script>var scL10n = <?php echo wp_json_encode([
+  'copie' => __('Copié!', 'scout-codes'),
+  'copier' => __('Copier', 'scout-codes'),
+  'cleDeCode' => __('CLÉ DE CODE', 'scout-codes'),
+  'cle' => __('Clé:', 'scout-codes'),
+  'original' => __('Original:', 'scout-codes'),
+  'resultat' => __('Résultat:', 'scout-codes'),
+]); ?>;</script>
 <script>
 var cleDir = 'encode';
 
@@ -118,8 +126,8 @@ function copyOut() {
   var text = document.getElementById('out').textContent;
   navigator.clipboard.writeText(text).then(function() {
     var btn = document.getElementById('copyBtn');
-    btn.textContent = '✅ Copié!';
-    setTimeout(function() { btn.textContent = '📋 Copier'; }, 1500);
+    btn.textContent = '✅ ' + scL10n.copie;
+    setTimeout(function() { btn.textContent = '📋 ' + scL10n.copier; }, 1500);
   });
 }
 
@@ -127,7 +135,7 @@ function exportTxt() {
   var input = document.getElementById('inp').value;
   var output = document.getElementById('out').textContent;
   var keyVal = document.getElementById('keyInput').value;
-  var content = 'CLÉ DE CODE\nClé: ' + keyVal + '\nMode: ' + cleDir + '\n\nOriginal: ' + input + '\nRésultat: ' + output + '\n';
+  var content = scL10n.cleDeCode + '\n' + scL10n.cle + ' ' + keyVal + '\nMode: ' + cleDir + '\n\n' + scL10n.original + ' ' + input + '\n' + scL10n.resultat + ' ' + output + '\n';
   var blob = new Blob([content], {type: 'text/plain'});
   var a = document.createElement('a');
   a.href = URL.createObjectURL(blob);

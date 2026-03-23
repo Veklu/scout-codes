@@ -52,50 +52,57 @@ body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--txt)}
 <div class="container">
 
 <div class="card">
-  <h2>Comment ça marche?</h2>
-  <p class="desc">La clé : on commence la lecture par les <strong>traits verticaux</strong> (les voyelles), puis les <strong>traits horizontaux</strong> (qui avancent dans l'alphabet après cette voyelle).</p>
+  <h2><?php esc_html_e('Comment ça marche?', 'scout-codes'); ?></h2>
+  <p class="desc"><?php echo wp_kses(__('La clé : on commence la lecture par les <strong>traits verticaux</strong> (les voyelles), puis les <strong>traits horizontaux</strong> (qui avancent dans l\'alphabet après cette voyelle).', 'scout-codes'), ['strong' => []]); ?></p>
 
   <div class="legend">
-    <strong>Voyelles = traits verticaux :</strong> A=1V, E=2V, I=3V, O=4V, U=5V, Y=6V<br>
-    <strong>Consonnes = voyelle + traits horizontaux :</strong> À partir de la voyelle, on avance dans l'alphabet avec les traits horizontaux.<br>
-    Exemple : B = 1V+1H (1 après A), C = 1V+2H (2 après A), D = 1V+3H (3 après A)<br>
+    <strong><?php esc_html_e('Voyelles = traits verticaux :', 'scout-codes'); ?></strong> A=1V, E=2V, I=3V, O=4V, U=5V, Y=6V<br>
+    <strong><?php esc_html_e('Consonnes = voyelle + traits horizontaux :', 'scout-codes'); ?></strong> <?php esc_html_e('À partir de la voyelle, on avance dans l\'alphabet avec les traits horizontaux.', 'scout-codes'); ?><br>
+    <?php esc_html_e('Exemple : B = 1V+1H (1 après A), C = 1V+2H (2 après A), D = 1V+3H (3 après A)', 'scout-codes'); ?><br>
     F = 2V+1H (1 après E), G = 2V+2H, H = 2V+3H<br><br>
-    <strong>Lecture :</strong> Traits verticaux d'abord → donne la voyelle de base → traits horizontaux → avance d'autant de lettres.
+    <strong><?php esc_html_e('Lecture :', 'scout-codes'); ?></strong> <?php esc_html_e('Traits verticaux d\'abord → donne la voyelle de base → traits horizontaux → avance d\'autant de lettres.', 'scout-codes'); ?>
   </div>
 
   <div class="alpha-grid" id="alphaGrid"></div>
 
   <div class="example">
-    <strong>Exemple : CHAT</strong>
+    <strong><?php esc_html_e('Exemple : CHAT', 'scout-codes'); ?></strong>
     <div class="example-row" id="exampleRow"></div>
   </div>
 </div>
 
 <!-- ENCODER -->
 <div class="card">
-  <h2>✏️ Encodeur / Décodeur</h2>
+  <h2>✏️ <?php esc_html_e('Encodeur / Décodeur', 'scout-codes'); ?></h2>
 
   <div class="dir-toggle">
-    <button class="active" onclick="setDir('encode',this)">Texte → Samouraï</button>
-    <button onclick="setDir('decode',this)">Samouraï → Texte</button>
+    <button class="active" onclick="setDir('encode',this)"><?php esc_html_e('Texte → Samouraï', 'scout-codes'); ?></button>
+    <button onclick="setDir('decode',this)"><?php esc_html_e('Samouraï → Texte', 'scout-codes'); ?></button>
   </div>
 
   <div class="encoder-input">
-    <textarea id="inputText" placeholder="Tapez votre message ici..." oninput="convert()"></textarea>
+    <textarea id="inputText" placeholder="<?php echo esc_attr__('Tapez votre message ici...', 'scout-codes'); ?>" oninput="convert()"></textarea>
   </div>
   <div class="btn-row">
-    <button class="btn btn-r" onclick="convert()">Convertir</button>
-    <button class="btn btn-o" onclick="clearAll()">Effacer</button>
-    <button class="btn btn-o" onclick="downloadSVG()">📥 SVG</button>
+    <button class="btn btn-r" onclick="convert()"><?php esc_html_e('Convertir', 'scout-codes'); ?></button>
+    <button class="btn btn-o" onclick="clearAll()"><?php esc_html_e('Effacer', 'scout-codes'); ?></button>
+    <button class="btn btn-o" onclick="downloadSVG()">📥 <?php esc_html_e('SVG', 'scout-codes'); ?></button>
   </div>
 
-  <div class="output-label" id="outLabel">SYMBOLES SAMOURAÏS</div>
-  <div class="output-area" id="output"><div class="placeholder">Votre message apparaîtra ici...</div></div>
+  <div class="output-label" id="outLabel"><?php esc_html_e('SYMBOLES SAMOURAÏS', 'scout-codes'); ?></div>
+  <div class="output-area" id="output"><div class="placeholder"><?php esc_html_e('Votre message apparaîtra ici...', 'scout-codes'); ?></div></div>
 </div>
 </div>
 
 
 
+<script>var scL10n = <?php echo wp_json_encode([
+  'tapezMessage' => __('Tapez votre message ici...', 'scout-codes'),
+  'entrezCode' => __('Entrez le code (ex: 1V+2H 2V+3H ou 1,2 2,3) séparé par espaces...', 'scout-codes'),
+  'symbolesSamourais' => __('SYMBOLES SAMOURAÏS', 'scout-codes'),
+  'texte' => __('TEXTE', 'scout-codes'),
+  'messageApparaitra' => __('Votre message apparaîtra ici...', 'scout-codes'),
+]); ?>;</script>
 <script>
 // Samouraï mapping from the book (p.131)
 // Vowels: vertical lines only
@@ -166,16 +173,16 @@ function setDir(d, btn) {
   document.querySelectorAll('.dir-toggle button').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   document.getElementById('inputText').placeholder = d === 'encode'
-    ? 'Tapez votre message ici...'
-    : 'Entrez le code (ex: 1V+2H 2V+3H ou 1,2 2,3) séparé par espaces...';
-  document.getElementById('outLabel').textContent = d === 'encode' ? 'SYMBOLES SAMOURAÏS' : 'TEXTE';
+    ? scL10n.tapezMessage
+    : scL10n.entrezCode;
+  document.getElementById('outLabel').textContent = d === 'encode' ? scL10n.symbolesSamourais : scL10n.texte;
   convert();
 }
 
 function convert() {
   const input = document.getElementById('inputText').value;
   const o = document.getElementById('output');
-  if (!input.trim()) { o.innerHTML = '<div class="placeholder">Votre message apparaîtra ici...</div>'; o.classList.remove('active'); return; }
+  if (!input.trim()) { o.innerHTML = '<div class="placeholder">' + scL10n.messageApparaitra + '</div>'; o.classList.remove('active'); return; }
   o.classList.add('active');
 
   if (dir === 'encode') {
@@ -205,7 +212,7 @@ function convert() {
   }
 }
 
-function clearAll() { document.getElementById('inputText').value = ''; const o = document.getElementById('output'); o.innerHTML = '<div class="placeholder">Votre message apparaîtra ici...</div>'; o.classList.remove('active'); }
+function clearAll() { document.getElementById('inputText').value = ''; const o = document.getElementById('output'); o.innerHTML = '<div class="placeholder">' + scL10n.messageApparaitra + '</div>'; o.classList.remove('active'); }
 
 function downloadSVG() {
   const svgs = document.getElementById('output').querySelectorAll('svg');

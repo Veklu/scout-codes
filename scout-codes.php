@@ -5,6 +5,7 @@
  * Version: 1.0.0
  * Author: 5e Groupe scout Grand-Moulin
  * Text Domain: scout-codes
+ * Domain Path: /languages
  */
 
 defined('ABSPATH') || exit;
@@ -12,13 +13,17 @@ defined('ABSPATH') || exit;
 define('SCOUT_CODES_DIR', plugin_dir_path(__FILE__));
 define('SCOUT_CODES_URL', plugin_dir_url(__FILE__));
 
+add_action('plugins_loaded', function () {
+    load_plugin_textdomain('scout-codes', false, dirname(plugin_basename(__FILE__)) . '/languages');
+});
+
 // ═══════════ CODE DEFINITIONS ═══════════
 function scout_codes_get_all() {
     return [
         'morse' => [
-            'name' => 'Code Morse',
+            'name' => __('Code Morse', 'scout-codes'),
             'icon' => '📡',
-            'description' => 'Inventé par Samuel Morse en 1836. Points et tirets transmis par télégraphe.',
+            'description' => __('Inventé par Samuel Morse en 1836. Points et tirets transmis par télégraphe.', 'scout-codes'),
             'map' => [
                 'A'=>'.-','B'=>'-...','C'=>'-.-.','D'=>'-..','E'=>'.','F'=>'..-.','G'=>'--.','H'=>'....','I'=>'..','J'=>'.---',
                 'K'=>'-.-','L'=>'.-..','M'=>'--','N'=>'-.','O'=>'---','P'=>'.--.','Q'=>'--.-','R'=>'.-.','S'=>'...','T'=>'-',
@@ -28,25 +33,25 @@ function scout_codes_get_all() {
             'separator' => ' / ',
         ],
         'cesar' => [
-            'name' => 'Chiffre de César',
+            'name' => __('Chiffre de César', 'scout-codes'),
             'icon' => '🏛️',
-            'description' => 'Décalage de l\'alphabet. César utilisait un décalage de 3 lettres.',
+            'description' => __('Décalage de l\'alphabet. César utilisait un décalage de 3 lettres.', 'scout-codes'),
             'shift' => 3,
         ],
         'atbash' => [
-            'name' => 'Chiffre Atbash',
+            'name' => __('Chiffre Atbash', 'scout-codes'),
             'icon' => '🔄',
-            'description' => 'Substitution miroir : A↔Z, B↔Y, C↔X, etc. D\'origine hébraïque.',
+            'description' => __('Substitution miroir : A↔Z, B↔Y, C↔X, etc. D\'origine hébraïque.', 'scout-codes'),
         ],
         'binaire' => [
-            'name' => 'Code binaire (ASCII)',
+            'name' => __('Code binaire (ASCII)', 'scout-codes'),
             'icon' => '💻',
-            'description' => 'Chaque lettre est représentée par 8 bits (0 et 1).',
+            'description' => __('Chaque lettre est représentée par 8 bits (0 et 1).', 'scout-codes'),
         ],
         'pigpen' => [
-            'name' => 'Pigpen (Franc-maçon)',
+            'name' => __('Pigpen (Franc-maçon)', 'scout-codes'),
             'icon' => '✏️',
-            'description' => 'Code géométrique utilisé par les Francs-maçons au XVIIIe siècle.',
+            'description' => __('Code géométrique utilisé par les Francs-maçons au XVIIIe siècle.', 'scout-codes'),
             'map' => [
                 'A'=>'⌐','B'=>'⌐·','C'=>'⌐.','D'=>'⌐:','E'=>'⌐.·','F'=>'⌐..','G'=>'⌐∟','H'=>'⌐∟·','I'=>'⌐∟.',
                 'J'=>'△','K'=>'△·','L'=>'△.','M'=>'▽','N'=>'▽·','O'=>'▽.','P'=>'◁','Q'=>'◁·','R'=>'◁.',
@@ -55,9 +60,9 @@ function scout_codes_get_all() {
             ],
         ],
         'semaphore' => [
-            'name' => 'Sémaphore (drapeaux)',
+            'name' => __('Sémaphore (drapeaux)', 'scout-codes'),
             'icon' => '🚩',
-            'description' => 'Communication par positions de drapeaux. Utilisé en mer.',
+            'description' => __('Communication par positions de drapeaux. Utilisé en mer.', 'scout-codes'),
             'map' => [
                 'A'=>'↙','B'=>'←','C'=>'↖','D'=>'↑','E'=>'→','F'=>'↗','G'=>'↓',
                 'H'=>'↙←','I'=>'↙↖','J'=>'↑↗','K'=>'↙↑','L'=>'↙→','M'=>'↙↗','N'=>'↙↓',
@@ -67,9 +72,9 @@ function scout_codes_get_all() {
             'separator' => ' ',
         ],
         'braille' => [
-            'name' => 'Braille',
+            'name' => __('Braille', 'scout-codes'),
             'icon' => '⠿',
-            'description' => 'Système tactile à 6 points inventé par Louis Braille en 1824.',
+            'description' => __('Système tactile à 6 points inventé par Louis Braille en 1824.', 'scout-codes'),
             'map' => [
                 'A'=>'⠁','B'=>'⠃','C'=>'⠉','D'=>'⠙','E'=>'⠑','F'=>'⠋','G'=>'⠛','H'=>'⠓','I'=>'⠊','J'=>'⠚',
                 'K'=>'⠅','L'=>'⠇','M'=>'⠍','N'=>'⠝','O'=>'⠕','P'=>'⠏','Q'=>'⠟','R'=>'⠗','S'=>'⠎','T'=>'⠞',
@@ -78,9 +83,9 @@ function scout_codes_get_all() {
             'separator' => '',
         ],
         'navajo' => [
-            'name' => 'Code Navajo',
+            'name' => __('Code Navajo', 'scout-codes'),
             'icon' => '🦅',
-            'description' => 'Inspiré des Code Talkers de la Seconde Guerre mondiale.',
+            'description' => __('Inspiré des Code Talkers de la Seconde Guerre mondiale.', 'scout-codes'),
             'map' => [
                 'A'=>'wol-la-chee','B'=>'shush','C'=>'moasi','D'=>'be','E'=>'dzeh','F'=>'ma-e',
                 'G'=>'klizzie','H'=>'lin','I'=>'tkin','J'=>'tkele-cho-gi','K'=>'klizzie-yazzie','L'=>'dibeh-yazzie',
@@ -198,7 +203,7 @@ add_shortcode('scout_code_du_jour', function($atts) {
     <div class="scout-cotd" style="background:linear-gradient(135deg,#003320,#007748);border-radius:16px;padding:28px;color:#fff;max-width:600px;margin:20px auto;box-shadow:0 8px 24px rgba(0,119,72,0.2)">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
             <div>
-                <div style="font-size:12px;opacity:0.6;text-transform:uppercase;letter-spacing:1px">Code du jour</div>
+                <div style="font-size:12px;opacity:0.6;text-transform:uppercase;letter-spacing:1px"><?php esc_html_e('Code du jour', 'scout-codes'); ?></div>
                 <div style="font-size:1.3rem;font-weight:700"><?php echo esc_html($code_info['icon'] . ' ' . $code_info['name']); ?></div>
             </div>
             <div style="font-size:13px;opacity:0.6"><?php echo date_i18n('j F Y'); ?></div>
@@ -207,7 +212,7 @@ add_shortcode('scout_code_du_jour', function($atts) {
             <?php echo esc_html($encoded); ?>
         </div>
         <details style="cursor:pointer">
-            <summary style="font-size:13px;opacity:0.7">💡 Indice : cliquez pour voir la réponse</summary>
+            <summary style="font-size:13px;opacity:0.7"><?php echo '💡 ' . esc_html__('Indice : cliquez pour voir la réponse', 'scout-codes'); ?></summary>
             <div style="margin-top:8px;background:rgba(255,180,0,0.15);padding:10px 14px;border-radius:8px;font-weight:600">
                 <?php echo esc_html($message); ?>
             </div>
@@ -226,8 +231,8 @@ add_shortcode('scout_encodeur', function($atts) {
     ob_start(); ?>
     <div class="scout-encoder" style="max-width:600px;margin:20px auto">
         <div style="background:#fff;border:1px solid #e0ddd4;border-radius:12px;padding:24px;box-shadow:0 2px 8px rgba(0,0,0,0.06)">
-            <h3 style="color:#007748;margin:0 0 16px">🔐 Encodeur de messages secrets</h3>
-            <textarea id="scEncInput" rows="3" placeholder="Entrez votre message ici..." style="width:100%;padding:12px;border:1.5px solid #d0d0c8;border-radius:8px;font-size:14px;font-family:inherit;resize:vertical;margin-bottom:12px"></textarea>
+            <h3 style="color:#007748;margin:0 0 16px"><?php echo '🔐 ' . esc_html__('Encodeur de messages secrets', 'scout-codes'); ?></h3>
+            <textarea id="scEncInput" rows="3" placeholder="<?php esc_attr_e('Entrez votre message ici...', 'scout-codes'); ?>" style="width:100%;padding:12px;border:1.5px solid #d0d0c8;border-radius:8px;font-size:14px;font-family:inherit;resize:vertical;margin-bottom:12px"></textarea>
             <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px">
                 <select id="scEncCode" style="flex:1;padding:10px;border:1.5px solid #d0d0c8;border-radius:8px;font-size:14px">
                     <?php foreach ($codes as $key => $info): ?>
@@ -235,13 +240,13 @@ add_shortcode('scout_encodeur', function($atts) {
                     <?php endforeach; ?>
                 </select>
                 <div id="scEncShiftWrap" style="display:none">
-                    <label style="font-size:12px;color:#6a6a62">Décalage:</label>
+                    <label style="font-size:12px;color:#6a6a62"><?php esc_html_e('Décalage:', 'scout-codes'); ?></label>
                     <input type="number" id="scEncShift" value="3" min="1" max="25" style="width:60px;padding:8px;border:1.5px solid #d0d0c8;border-radius:8px">
                 </div>
-                <button onclick="scEncode()" style="padding:10px 20px;background:#007748;color:#fff;border:none;border-radius:8px;font-weight:600;cursor:pointer;font-size:14px">Encoder →</button>
+                <button onclick="scEncode()" style="padding:10px 20px;background:#007748;color:#fff;border:none;border-radius:8px;font-weight:600;cursor:pointer;font-size:14px"><?php esc_html_e('Encoder →', 'scout-codes'); ?></button>
             </div>
             <div id="scEncResult" style="display:none;background:#f9f8f5;border:2px solid #e0ddd4;border-radius:10px;padding:16px;font-family:monospace;font-size:0.95rem;word-break:break-all;line-height:1.8;position:relative">
-                <button onclick="scCopyResult()" style="position:absolute;top:8px;right:8px;background:#007748;color:#fff;border:none;border-radius:6px;padding:4px 10px;font-size:11px;cursor:pointer">📋 Copier</button>
+                <button onclick="scCopyResult()" style="position:absolute;top:8px;right:8px;background:#007748;color:#fff;border:none;border-radius:6px;padding:4px 10px;font-size:11px;cursor:pointer"><?php echo '📋 ' . esc_html__('Copier', 'scout-codes'); ?></button>
                 <div id="scEncOutput"></div>
             </div>
         </div>
@@ -262,9 +267,13 @@ add_shortcode('scout_encodeur', function($atts) {
             document.getElementById('scEncResult').style.display = 'block';
         });
     }
+    var scL10n = <?php echo wp_json_encode([
+        'copied' => __('Copié!', 'scout-codes'),
+        'copy'   => __('Copier', 'scout-codes'),
+    ]); ?>;
     function scCopyResult(){
         navigator.clipboard.writeText(document.getElementById('scEncOutput').textContent);
-        var btn = event.target; btn.textContent = '✅ Copié!'; setTimeout(function(){ btn.textContent = '📋 Copier'; }, 1500);
+        var btn = event.target; btn.textContent = '✅ ' + scL10n.copied; setTimeout(function(){ btn.textContent = '📋 ' + scL10n.copy; }, 1500);
     }
     document.getElementById('scEncInput').addEventListener('keydown', function(e){ if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();scEncode();}});
     </script>
@@ -302,7 +311,7 @@ add_shortcode('scout_codes_reference', function($atts) {
         <div style="font-family:monospace;font-size:13px;background:#f9f8f5;padding:12px;border-radius:8px">
             <div>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</div>
             <div style="color:#007748;font-weight:700">D E F G H I J K L M N O P Q R S T U V W X Y Z A B C</div>
-            <div style="font-size:11px;color:#6a6a62;margin-top:4px">↑ Décalage de 3 (modifiable dans l'encodeur)</div>
+            <div style="font-size:11px;color:#6a6a62;margin-top:4px"><?php echo '↑ ' . esc_html__('Décalage de 3 (modifiable dans l\'encodeur)', 'scout-codes'); ?></div>
         </div>
         <?php elseif ($key === 'atbash'): ?>
         <div style="font-family:monospace;font-size:13px;background:#f9f8f5;padding:12px;border-radius:8px">
@@ -342,8 +351,8 @@ add_action('rest_api_init', function() {
 // ═══════════ ADMIN: Message management ═══════════
 add_action('admin_menu', function() {
     add_options_page(
-        'Codes scouts',
-        '⚜️ Codes scouts',
+        __('Codes scouts', 'scout-codes'),
+        '⚜️ ' . __('Codes scouts', 'scout-codes'),
         'manage_options',
         'scout-codes',
         'scout_codes_admin_page'
@@ -354,11 +363,11 @@ function scout_codes_admin_page() {
     if (isset($_POST['scout_save_messages']) && wp_verify_nonce($_POST['_sc_nonce'], 'scout_save_messages')) {
         $messages = array_filter(array_map('sanitize_text_field', explode("\n", $_POST['messages'] ?? '')));
         update_option('scout_codes_messages', $messages);
-        echo '<div class="notice notice-success"><p>Messages sauvegardés!</p></div>';
+        echo '<div class="notice notice-success"><p>' . esc_html__('Messages sauvegardés!', 'scout-codes') . '</p></div>';
     }
     if (isset($_POST['scout_save_cotd']) && wp_verify_nonce($_POST['_sc_nonce2'], 'scout_save_cotd')) {
         update_option('scout_codes_forced_code', sanitize_key($_POST['forced_code'] ?? ''));
-        echo '<div class="notice notice-success"><p>Code du jour mis à jour!</p></div>';
+        echo '<div class="notice notice-success"><p>' . esc_html__('Code du jour mis à jour!', 'scout-codes') . '</p></div>';
     }
 
     $messages = get_option('scout_codes_messages', [
@@ -371,63 +380,63 @@ function scout_codes_admin_page() {
     $codes = scout_codes_get_all();
     ?>
     <div class="wrap">
-        <h1>⚜️ Codes scouts — Configuration</h1>
+        <h1><?php echo '⚜️ ' . esc_html__('Codes scouts — Configuration', 'scout-codes'); ?></h1>
 
         <div class="postbox" style="padding:20px;margin-top:20px">
-            <h2 style="margin-top:0">🎯 Code du jour — Forcer un code</h2>
-            <p class="description">Par défaut, le code change automatiquement chaque jour. Vous pouvez forcer un code spécifique.</p>
+            <h2 style="margin-top:0"><?php echo '🎯 ' . esc_html__('Code du jour — Forcer un code', 'scout-codes'); ?></h2>
+            <p class="description"><?php esc_html_e('Par défaut, le code change automatiquement chaque jour. Vous pouvez forcer un code spécifique.', 'scout-codes'); ?></p>
             <form method="post">
                 <?php wp_nonce_field('scout_save_cotd', '_sc_nonce2'); ?>
                 <select name="forced_code" style="padding:8px;margin-right:8px">
-                    <option value="" <?php selected($forced, ''); ?>>🎲 Automatique (change chaque jour)</option>
+                    <option value="" <?php selected($forced, ''); ?>><?php echo '🎲 ' . esc_html__('Automatique (change chaque jour)', 'scout-codes'); ?></option>
                     <?php foreach ($codes as $key => $info): ?>
                     <option value="<?php echo esc_attr($key); ?>" <?php selected($forced, $key); ?>><?php echo esc_html($info['icon'] . ' ' . $info['name']); ?></option>
                     <?php endforeach; ?>
                 </select>
-                <button type="submit" name="scout_save_cotd" class="button button-primary">Appliquer</button>
+                <button type="submit" name="scout_save_cotd" class="button button-primary"><?php esc_html_e('Appliquer', 'scout-codes'); ?></button>
                 <?php if ($forced): ?>
-                <span style="margin-left:8px;color:#e67e22">⚠️ Code forcé : <?php echo esc_html($codes[$forced]['name'] ?? $forced); ?></span>
+                <span style="margin-left:8px;color:#e67e22"><?php echo '⚠️ ' . esc_html(sprintf(__('Code forcé : %s', 'scout-codes'), $codes[$forced]['name'] ?? $forced)); ?></span>
                 <?php endif; ?>
             </form>
         </div>
 
         <div class="postbox" style="padding:20px;margin-top:20px">
-            <h2 style="margin-top:0">💬 Messages à encoder</h2>
-            <p class="description">Un message par ligne. Le système choisit un message différent chaque jour pour le "Code du jour".</p>
+            <h2 style="margin-top:0"><?php echo '💬 ' . esc_html__('Messages à encoder', 'scout-codes'); ?></h2>
+            <p class="description"><?php esc_html_e('Un message par ligne. Le système choisit un message différent chaque jour pour le "Code du jour".', 'scout-codes'); ?></p>
             <form method="post">
                 <?php wp_nonce_field('scout_save_messages', '_sc_nonce'); ?>
                 <textarea name="messages" rows="12" style="width:100%;font-family:monospace;padding:12px;border:1px solid #d0d0c8;border-radius:8px"><?php echo esc_textarea(implode("\n", $messages)); ?></textarea>
                 <div style="margin-top:8px">
-                    <button type="submit" name="scout_save_messages" class="button button-primary">💾 Sauvegarder les messages</button>
-                    <span style="margin-left:12px;font-size:12px;color:#6a6a62"><?php echo count($messages); ?> messages configurés</span>
+                    <button type="submit" name="scout_save_messages" class="button button-primary"><?php echo '💾 ' . esc_html__('Sauvegarder les messages', 'scout-codes'); ?></button>
+                    <span style="margin-left:12px;font-size:12px;color:#6a6a62"><?php echo esc_html(sprintf(__('%d messages configurés', 'scout-codes'), count($messages))); ?></span>
                 </div>
             </form>
         </div>
 
         <div class="postbox" style="padding:20px;margin-top:20px">
-            <h2 style="margin-top:0">📋 Shortcodes disponibles</h2>
+            <h2 style="margin-top:0"><?php echo '📋 ' . esc_html__('Shortcodes disponibles', 'scout-codes'); ?></h2>
             <table class="form-table">
-                <tr><th><code>[scout_code_du_jour]</code></th><td>Affiche le code du jour avec un message encodé. Change automatiquement chaque jour.<br>Options: <code>[scout_code_du_jour code="morse"]</code> pour forcer un code, <code>[scout_code_du_jour message="Mon message"]</code> pour un message fixe.</td></tr>
-                <tr><th><code>[scout_encodeur]</code></th><td>Outil interactif pour encoder des messages dans n'importe quel code scout.</td></tr>
-                <tr><th><code>[scout_codes_reference]</code></th><td>Tableau de référence de tous les codes.<br>Options: <code>[scout_codes_reference code="morse"]</code> pour afficher un seul code.</td></tr>
+                <tr><th><code>[scout_code_du_jour]</code></th><td><?php esc_html_e('Affiche le code du jour avec un message encodé. Change automatiquement chaque jour.', 'scout-codes'); ?><br><?php echo esc_html__('Options:', 'scout-codes'); ?> <code>[scout_code_du_jour code="morse"]</code> <?php esc_html_e('pour forcer un code,', 'scout-codes'); ?> <code>[scout_code_du_jour message="Mon message"]</code> <?php esc_html_e('pour un message fixe.', 'scout-codes'); ?></td></tr>
+                <tr><th><code>[scout_encodeur]</code></th><td><?php esc_html_e('Outil interactif pour encoder des messages dans n\'importe quel code scout.', 'scout-codes'); ?></td></tr>
+                <tr><th><code>[scout_codes_reference]</code></th><td><?php esc_html_e('Tableau de référence de tous les codes.', 'scout-codes'); ?><br><?php echo esc_html__('Options:', 'scout-codes'); ?> <code>[scout_codes_reference code="morse"]</code> <?php esc_html_e('pour afficher un seul code.', 'scout-codes'); ?></td></tr>
             </table>
         </div>
 
         <div class="postbox" style="padding:20px;margin-top:20px">
         <div class="postbox" style="padding:20px;margin-top:20px">
-            <h2 style="margin-top:0">🖼️ Portraits des inventeurs</h2>
-            <p class="description">Téléversez des portraits depuis votre ordinateur. Utilisez des images du domaine public (Wikimedia Commons). Les images doivent être importées dans la <a href="<?php echo admin_url('upload.php'); ?>">bibliothèque de médias</a> d'abord.</p>
+            <h2 style="margin-top:0"><?php echo '🖼️ ' . esc_html__('Portraits des inventeurs', 'scout-codes'); ?></h2>
+            <p class="description"><?php printf(__('Téléversez des portraits depuis votre ordinateur. Utilisez des images du domaine public (Wikimedia Commons). Les images doivent être importées dans la <a href="%s">bibliothèque de médias</a> d\'abord.', 'scout-codes'), esc_url(admin_url('upload.php'))); ?></p>
             <?php if (isset($_POST['scout_save_portraits']) && wp_verify_nonce($_POST['_sc_portraits'], 'scout_save_portraits')) {
                 foreach (scout_codes_get_all_pages() as $slug => $info) {
                     $url = sanitize_url($_POST['portrait_' . $slug] ?? '');
                     update_option('scout_codes_portrait_' . $slug, $url);
                 }
-                echo '<div class="notice notice-success"><p>Portraits sauvegardés!</p></div>';
+                echo '<div class="notice notice-success"><p>' . esc_html__('Portraits sauvegardés!', 'scout-codes') . '</p></div>';
             } ?>
             <form method="post">
             <?php wp_nonce_field('scout_save_portraits', '_sc_portraits'); ?>
             <table class="widefat" style="max-width:700px">
-                <thead><tr><th>Code</th><th>URL de l'image (depuis la bibliothèque de médias)</th><th style="width:60px">Aperçu</th></tr></thead>
+                <thead><tr><th><?php esc_html_e('Code', 'scout-codes'); ?></th><th><?php esc_html_e('URL de l\'image (depuis la bibliothèque de médias)', 'scout-codes'); ?></th><th style="width:60px"><?php esc_html_e('Aperçu', 'scout-codes'); ?></th></tr></thead>
                 <tbody>
                 <?php foreach (scout_codes_get_all_pages() as $slug => $info):
                     $portrait_url = get_option('scout_codes_portrait_' . $slug, '');
@@ -440,21 +449,21 @@ function scout_codes_admin_page() {
                 <?php endforeach; ?>
                 </tbody>
             </table>
-            <p style="margin-top:8px"><button type="submit" name="scout_save_portraits" class="button button-primary">💾 Sauvegarder les portraits</button></p>
-            <p class="description" style="margin-top:8px">💡 <strong>Comment faire :</strong> 1) Téléchargez une image de Wikimedia Commons sur votre ordinateur. 2) Importez-la dans <a href="<?php echo admin_url('media-new.php'); ?>">Médias → Ajouter</a>. 3) Copiez l'URL de l'image et collez-la ici.</p>
+            <p style="margin-top:8px"><button type="submit" name="scout_save_portraits" class="button button-primary"><?php echo '💾 ' . esc_html__('Sauvegarder les portraits', 'scout-codes'); ?></button></p>
+            <p class="description" style="margin-top:8px"><?php printf(__('💡 <strong>Comment faire :</strong> 1) Téléchargez une image de Wikimedia Commons sur votre ordinateur. 2) Importez-la dans <a href="%s">Médias → Ajouter</a>. 3) Copiez l\'URL de l\'image et collez-la ici.', 'scout-codes'), esc_url(admin_url('media-new.php'))); ?></p>
             </form>
         </div>
 
-            <h2 style="margin-top:0">🧪 Aperçu — Code du jour</h2>
+            <h2 style="margin-top:0"><?php echo '🧪 ' . esc_html__('Aperçu — Code du jour', 'scout-codes'); ?></h2>
             <?php echo do_shortcode('[scout_code_du_jour]'); ?>
         </div>
 
         <div class="postbox" style="padding:20px;margin-top:20px">
-            <h2 style="margin-top:0">📄 Pages générées</h2>
+            <h2 style="margin-top:0"><?php echo '📄 ' . esc_html__('Pages générées', 'scout-codes'); ?></h2>
             <?php if (isset($_GET['recreated'])): ?>
-                <div class="notice notice-success"><p>Pages recréées! Visitez la page d'accueil pour déclencher la création.</p></div>
+                <div class="notice notice-success"><p><?php esc_html_e('Pages recréées! Visitez la page d\'accueil pour déclencher la création.', 'scout-codes'); ?></p></div>
             <?php endif; ?>
-            <p class="description">Le plugin crée automatiquement une page par code scout. Si les pages ont été supprimées, vous pouvez les recréer.</p>
+            <p class="description"><?php esc_html_e('Le plugin crée automatiquement une page par code scout. Si les pages ont été supprimées, vous pouvez les recréer.', 'scout-codes'); ?></p>
             <?php
             $hub = get_page_by_path('codes-scouts');
             if ($hub): ?>
@@ -465,16 +474,16 @@ function scout_codes_admin_page() {
                     if ($page): ?>
                         <li><?php echo esc_html($info['icon']); ?> <a href="<?php echo get_permalink($page); ?>"><?php echo esc_html($info['name']); ?></a></li>
                     <?php else: ?>
-                        <li style="color:#c0392b"><?php echo esc_html($info['icon'] . ' ' . $info['name']); ?> — ⚠️ page manquante</li>
+                        <li style="color:#c0392b"><?php echo esc_html($info['icon'] . ' ' . $info['name']); ?> — <?php echo '⚠️ ' . esc_html__('page manquante', 'scout-codes'); ?></li>
                     <?php endif; endforeach; ?>
                 </ul>
             <?php else: ?>
-                <p style="color:#e67e22">⚠️ Pages non encore créées. Elles seront créées automatiquement au prochain chargement d'une page admin.</p>
+                <p style="color:#e67e22"><?php echo '⚠️ ' . esc_html__('Pages non encore créées. Elles seront créées automatiquement au prochain chargement d\'une page admin.', 'scout-codes'); ?></p>
             <?php endif; ?>
             <form method="post" action="<?php echo admin_url('admin-post.php'); ?>" style="margin-top:12px">
                 <?php wp_nonce_field('scout_recreate_pages'); ?>
                 <input type="hidden" name="action" value="scout_recreate_code_pages">
-                <button type="submit" class="button" onclick="return confirm('Supprimer et recréer toutes les pages de codes?')">🔄 Recréer toutes les pages</button>
+                <button type="submit" class="button" onclick="return confirm('<?php echo esc_js(__('Supprimer et recréer toutes les pages de codes?', 'scout-codes')); ?>')"><?php echo '🔄 ' . esc_html__('Recréer toutes les pages', 'scout-codes'); ?></button>
             </form>
         </div>
     </div>
@@ -491,34 +500,34 @@ add_filter('scout_codes_today_code', function($code) {
 // ═══════════ FULL CODE PAGE LIST (for pages with rich content) ═══════════
 function scout_codes_get_all_pages() {
     return [
-        'morse' => ['name' => 'Code Morse', 'icon' => '📡', 'file' => 'code-morse.php',
-            'description' => 'Points et tirets — le langage universel des scouts. Avec audio!'],
-        'braille' => ['name' => 'Braille', 'icon' => '⠿', 'file' => 'code-braille.php',
-            'description' => 'Système tactile à 6 points inventé par Louis Braille en 1824.'],
-        'tictactoc' => ['name' => 'Tic-Tac-Toc (Pigpen)', 'icon' => '✏️', 'file' => 'code-tictactoc.php',
-            'description' => 'Code géométrique caché dans une grille de morpion.'],
-        'semaphore' => ['name' => 'Sémaphore, Grec & Runes', 'icon' => '🚩', 'file' => 'code-grec-rune-semaphore.php',
-            'description' => 'Drapeaux, alphabet grec et runes nordiques.'],
-        'substitution' => ['name' => 'César & substitution', 'icon' => '🏛️', 'file' => 'code-substitution.php',
-            'description' => 'Décalage de l\'alphabet et substitutions personnalisées.'],
-        'ascii' => ['name' => 'Code binaire (ASCII)', 'icon' => '💻', 'file' => 'code-ascii.php',
-            'description' => 'Chaque lettre en bits — le langage des ordinateurs.'],
-        'telephone' => ['name' => 'Code téléphone', 'icon' => '📱', 'file' => 'code-telephone.php',
-            'description' => 'Les lettres cachées dans le clavier du téléphone.'],
-        'samourais' => ['name' => 'Code des Samouraïs', 'icon' => '⚔️', 'file' => 'code-samourais.php',
-            'description' => 'Un code inspiré des guerriers japonais.'],
-        'chinois' => ['name' => 'Code chinois', 'icon' => '🀄', 'file' => 'code-chinois.php',
-            'description' => 'Un code basé sur les traits des caractères chinois.'],
-        'musique' => ['name' => 'Code musical', 'icon' => '🎵', 'file' => 'code-musique.php',
-            'description' => 'Les notes de musique cachent des messages.'],
-        'cle' => ['name' => 'Code à clé', 'icon' => '🔑', 'file' => 'code-cle.php',
-            'description' => 'Un code qui utilise un mot-clé secret pour encoder.'],
-        'inverse-avocat' => ['name' => 'Code inversé & avocat', 'icon' => '🔄', 'file' => 'code-inverse-avocat.php',
-            'description' => 'Miroir, inversions et codes d\'avocat.'],
-        'deux-grilles' => ['name' => 'Code des deux grilles', 'icon' => '🔲', 'file' => 'code-deux-grilles.php',
-            'description' => 'Deux grilles superposées pour un chiffrement visuel.'],
-        'solaire' => ['name' => 'Code solaire', 'icon' => '☀️', 'file' => 'code-solair.php',
-            'description' => 'Un code inspiré des cadrans solaires.'],
+        'morse' => ['name' => __('Code Morse', 'scout-codes'), 'icon' => '📡', 'file' => 'code-morse.php',
+            'description' => __('Points et tirets — le langage universel des scouts. Avec audio!', 'scout-codes')],
+        'braille' => ['name' => __('Braille', 'scout-codes'), 'icon' => '⠿', 'file' => 'code-braille.php',
+            'description' => __('Système tactile à 6 points inventé par Louis Braille en 1824.', 'scout-codes')],
+        'tictactoc' => ['name' => __('Tic-Tac-Toc (Pigpen)', 'scout-codes'), 'icon' => '✏️', 'file' => 'code-tictactoc.php',
+            'description' => __('Code géométrique caché dans une grille de morpion.', 'scout-codes')],
+        'semaphore' => ['name' => __('Sémaphore, Grec & Runes', 'scout-codes'), 'icon' => '🚩', 'file' => 'code-grec-rune-semaphore.php',
+            'description' => __('Drapeaux, alphabet grec et runes nordiques.', 'scout-codes')],
+        'substitution' => ['name' => __('César & substitution', 'scout-codes'), 'icon' => '🏛️', 'file' => 'code-substitution.php',
+            'description' => __('Décalage de l\'alphabet et substitutions personnalisées.', 'scout-codes')],
+        'ascii' => ['name' => __('Code binaire (ASCII)', 'scout-codes'), 'icon' => '💻', 'file' => 'code-ascii.php',
+            'description' => __('Chaque lettre en bits — le langage des ordinateurs.', 'scout-codes')],
+        'telephone' => ['name' => __('Code téléphone', 'scout-codes'), 'icon' => '📱', 'file' => 'code-telephone.php',
+            'description' => __('Les lettres cachées dans le clavier du téléphone.', 'scout-codes')],
+        'samourais' => ['name' => __('Code des Samouraïs', 'scout-codes'), 'icon' => '⚔️', 'file' => 'code-samourais.php',
+            'description' => __('Un code inspiré des guerriers japonais.', 'scout-codes')],
+        'chinois' => ['name' => __('Code chinois', 'scout-codes'), 'icon' => '🀄', 'file' => 'code-chinois.php',
+            'description' => __('Un code basé sur les traits des caractères chinois.', 'scout-codes')],
+        'musique' => ['name' => __('Code musical', 'scout-codes'), 'icon' => '🎵', 'file' => 'code-musique.php',
+            'description' => __('Les notes de musique cachent des messages.', 'scout-codes')],
+        'cle' => ['name' => __('Code à clé', 'scout-codes'), 'icon' => '🔑', 'file' => 'code-cle.php',
+            'description' => __('Un code qui utilise un mot-clé secret pour encoder.', 'scout-codes')],
+        'inverse-avocat' => ['name' => __('Code inversé & avocat', 'scout-codes'), 'icon' => '🔄', 'file' => 'code-inverse-avocat.php',
+            'description' => __('Miroir, inversions et codes d\'avocat.', 'scout-codes')],
+        'deux-grilles' => ['name' => __('Code des deux grilles', 'scout-codes'), 'icon' => '🔲', 'file' => 'code-deux-grilles.php',
+            'description' => __('Deux grilles superposées pour un chiffrement visuel.', 'scout-codes')],
+        'solaire' => ['name' => __('Code solaire', 'scout-codes'), 'icon' => '☀️', 'file' => 'code-solair.php',
+            'description' => __('Un code inspiré des cadrans solaires.', 'scout-codes')],
     ];
 }
 
@@ -564,7 +573,7 @@ add_action('admin_init', function() {
 
 // Admin button to recreate pages
 add_action('admin_post_scout_recreate_code_pages', function() {
-    if (!current_user_can('manage_options')) wp_die('Accès refusé');
+    if (!current_user_can('manage_options')) wp_die(esc_html__('Accès refusé', 'scout-codes'));
     check_admin_referer('scout_recreate_pages');
     delete_option('scout_codes_pages_version');
     delete_option('scout_codes_pages_created');
@@ -583,15 +592,15 @@ add_shortcode('scout_codes_hub', function() {
     ob_start(); ?>
     <div>
         <div style="background:linear-gradient(135deg,#003320,#007748);padding:48px 24px;color:#fff;text-align:center">
-            <h2 style="font-size:2.2rem;margin-bottom:8px">🔐 Codes & signes scouts</h2>
-            <p style="opacity:0.7;font-size:0.95rem">Apprends les codes secrets utilisés par les scouts du monde entier!</p>
+            <h2 style="font-size:2.2rem;margin-bottom:8px"><?php echo '🔐 ' . esc_html__('Codes & signes scouts', 'scout-codes'); ?></h2>
+            <p style="opacity:0.7;font-size:0.95rem"><?php esc_html_e('Apprends les codes secrets utilisés par les scouts du monde entier!', 'scout-codes'); ?></p>
         </div>
 
         <div style="max-width:800px;margin:0 auto;padding:24px 20px">
 
         <?php echo do_shortcode('[scout_code_du_jour]'); ?>
 
-        <h3 style="color:#007748;margin:32px 0 16px;font-size:1.1rem">📚 Tous les codes</h3>
+        <h3 style="color:#007748;margin:32px 0 16px;font-size:1.1rem"><?php echo '📚 ' . esc_html__('Tous les codes', 'scout-codes'); ?></h3>
         <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-bottom:32px">
             <?php foreach ($codes as $slug => $info):
                 $page = get_page_by_path('codes-scouts/code-' . $slug);
@@ -605,7 +614,7 @@ add_shortcode('scout_codes_hub', function() {
             <?php endforeach; ?>
         </div>
 
-        <h3 style="color:#007748;margin:0 0 16px;font-size:1.1rem">🔐 Encodeur</h3>
+        <h3 style="color:#007748;margin:0 0 16px;font-size:1.1rem"><?php echo '🔐 ' . esc_html__('Encodeur', 'scout-codes'); ?></h3>
         <?php echo do_shortcode('[scout_encodeur]'); ?>
         </div><!-- /.inner container -->
     </div><!-- /.outer -->
@@ -617,12 +626,12 @@ add_shortcode('scout_code_page', function($atts) {
     $atts = shortcode_atts(['code' => ''], $atts);
     $all_pages = scout_codes_get_all_pages();
     $slug = sanitize_key($atts['code']);
-    if (!isset($all_pages[$slug])) return '<p>Code inconnu.</p>';
+    if (!isset($all_pages[$slug])) return '<p>' . esc_html__('Code inconnu.', 'scout-codes') . '</p>';
     $info = $all_pages[$slug];
 
     // Check if we have a rich content file
     $file = SCOUT_CODES_DIR . 'pages/' . $info['file'];
-    if (!file_exists($file)) return '<p>Fichier de contenu introuvable.</p>';
+    if (!file_exists($file)) return '<p>' . esc_html__('Fichier de contenu introuvable.', 'scout-codes') . '</p>';
 
     ob_start(); ?>
     <div>
@@ -630,7 +639,7 @@ add_shortcode('scout_code_page', function($atts) {
         <div style="background:linear-gradient(135deg,#003320,#007748);padding:40px 24px;color:#fff;position:relative;overflow:hidden">
             <div style="position:absolute;top:0;right:40px;font-size:10rem;opacity:0.06;line-height:1"><?php echo esc_html($info['icon']); ?></div>
             <div style="max-width:800px;margin:0 auto;position:relative">
-                <a href="<?php echo esc_url(get_permalink(get_page_by_path('codes-scouts'))); ?>" style="color:rgba(255,255,255,0.6);text-decoration:none;font-size:13px">← Tous les codes</a>
+                <a href="<?php echo esc_url(get_permalink(get_page_by_path('codes-scouts'))); ?>" style="color:rgba(255,255,255,0.6);text-decoration:none;font-size:13px"><?php echo '← ' . esc_html__('Tous les codes', 'scout-codes'); ?></a>
                 <h1 style="font-size:2.4rem;margin:8px 0 4px"><?php echo esc_html($info['icon'] . ' ' . $info['name']); ?></h1>
                 <p style="opacity:0.7;font-size:0.95rem;max-width:500px"><?php echo esc_html($info['description']); ?></p>
             </div>
@@ -649,7 +658,7 @@ add_shortcode('scout_code_page', function($atts) {
         ?>
 
         <div style="text-align:center;padding:24px 20px 40px">
-            <a href="<?php echo esc_url(get_permalink(get_page_by_path('codes-scouts'))); ?>" style="display:inline-block;padding:10px 24px;background:#007748;color:#fff;border-radius:8px;text-decoration:none;font-weight:600">← Tous les codes</a>
+            <a href="<?php echo esc_url(get_permalink(get_page_by_path('codes-scouts'))); ?>" style="display:inline-block;padding:10px 24px;background:#007748;color:#fff;border-radius:8px;text-decoration:none;font-weight:600"><?php echo '← ' . esc_html__('Tous les codes', 'scout-codes'); ?></a>
         </div>
     </div>
     <?php return ob_get_clean();

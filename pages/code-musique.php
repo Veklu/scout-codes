@@ -31,20 +31,20 @@ textarea.enc:focus{outline:none;border-color:var(--g);box-shadow:0 0 0 3px rgba(
 </div>
 <div class="container">
 <div class="card">
-  <h2>Comment ça marche?</h2>
-  <p class="desc">Chaque lettre de l'alphabet correspond à une note musicale. Première portée : A–M (13 notes montantes), deuxième portée : N–Z (13 notes). Les chiffres 1–9 et 0 occupent une troisième portée. Cliquez sur les lettres ou tapez votre message!</p>
-  <div class="output-label">ALPHABET — CLIQUEZ POUR AJOUTER</div>
+  <h2><?php esc_html_e('Comment ça marche?', 'scout-codes'); ?></h2>
+  <p class="desc"><?php esc_html_e('Chaque lettre de l\'alphabet correspond à une note musicale. Première portée : A–M (13 notes montantes), deuxième portée : N–Z (13 notes). Les chiffres 1–9 et 0 occupent une troisième portée. Cliquez sur les lettres ou tapez votre message!', 'scout-codes'); ?></p>
+  <div class="output-label"><?php esc_html_e('ALPHABET — CLIQUEZ POUR AJOUTER', 'scout-codes'); ?></div>
   <div class="ref-grid" id="refGrid"></div>
 </div>
 <div class="card">
-  <h2>✏️ Encodeur</h2>
-  <textarea class="enc" id="inp" placeholder="Tapez votre message..." oninput="encode()"></textarea>
+  <h2>✏️ <?php esc_html_e('Encodeur', 'scout-codes'); ?></h2>
+  <textarea class="enc" id="inp" placeholder="<?php echo esc_attr__('Tapez votre message...', 'scout-codes'); ?>" oninput="encode()"></textarea>
   <div class="btn-row">
-    <button class="btn btn-g" onclick="encode()">Encoder</button>
-    <button class="btn btn-o" onclick="document.getElementById('inp').value='';document.getElementById('out').innerHTML=''">Effacer</button>
-    <button class="btn btn-o" onclick="exportSVG()">📥 Exporter SVG</button>
+    <button class="btn btn-g" onclick="encode()"><?php esc_html_e('Encoder', 'scout-codes'); ?></button>
+    <button class="btn btn-o" onclick="document.getElementById('inp').value='';document.getElementById('out').innerHTML=''"><?php esc_html_e('Effacer', 'scout-codes'); ?></button>
+    <button class="btn btn-o" onclick="exportSVG()">📥 <?php esc_html_e('Exporter SVG', 'scout-codes'); ?></button>
   </div>
-  <div class="output-label">PORTÉE MUSICALE</div>
+  <div class="output-label"><?php esc_html_e('PORTÉE MUSICALE', 'scout-codes'); ?></div>
   <div class="staff-output">
     <div class="note-row" id="out"></div>
   </div>

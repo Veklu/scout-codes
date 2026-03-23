@@ -56,50 +56,60 @@ body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--txt)}
 <div class="container">
 
 <div class="card">
-  <h2><span class="icon">📱</span> Le principe</h2>
-  <p class="desc">Ce code se retrouve sur tout téléphone. Chaque touche porte 3 lettres. Pour coder une lettre, on écrit le <strong>numéro de la touche</strong> avec la <strong>position de la lettre en exposant</strong>. Exemple : C est la 3e lettre de la touche 2, donc C = 2<sup>3</sup>.</p>
+  <h2><span class="icon">📱</span> <?php esc_html_e('Le principe', 'scout-codes'); ?></h2>
+  <p class="desc"><?php echo wp_kses(__('Ce code se retrouve sur tout téléphone. Chaque touche porte 3 lettres. Pour coder une lettre, on écrit le <strong>numéro de la touche</strong> avec la <strong>position de la lettre en exposant</strong>. Exemple : C est la 3e lettre de la touche 2, donc C = 2<sup>3</sup>.', 'scout-codes'), ['strong' => [], 'sup' => []]); ?></p>
 
   <!-- PHONE -->
   <div class="phone-wrap">
-    <div class="phone-screen" id="phoneScreen"><span style="color:#555">Appuyez sur une lettre...</span></div>
+    <div class="phone-screen" id="phoneScreen"><span style="color:#555"><?php esc_html_e('Appuyez sur une lettre...', 'scout-codes'); ?></span></div>
     <div class="keypad" id="keypad"></div>
   </div>
 
   <div class="example">
-    <strong>Exemple : CAMP = 2³ 2¹ 6¹ 7¹</strong><br><br>
-    C = touche 2, 3e lettre → 2³<br>
-    A = touche 2, 1re lettre → 2¹<br>
-    M = touche 6, 1re lettre → 6¹<br>
-    P = touche 7, 1re lettre → 7¹<br><br>
-    <strong>Autre exemple : 3¹=D, 3²=E, 3³=F</strong>
+    <strong><?php esc_html_e('Exemple : CAMP = 2³ 2¹ 6¹ 7¹', 'scout-codes'); ?></strong><br><br>
+    <?php esc_html_e('C = touche 2, 3e lettre → 2³', 'scout-codes'); ?><br>
+    <?php esc_html_e('A = touche 2, 1re lettre → 2¹', 'scout-codes'); ?><br>
+    <?php esc_html_e('M = touche 6, 1re lettre → 6¹', 'scout-codes'); ?><br>
+    <?php esc_html_e('P = touche 7, 1re lettre → 7¹', 'scout-codes'); ?><br><br>
+    <strong><?php esc_html_e('Autre exemple : 3¹=D, 3²=E, 3³=F', 'scout-codes'); ?></strong>
   </div>
 </div>
 
 <!-- ENCODER -->
 <div class="card">
-  <h2><span class="icon">⚡</span> Encodeur / Décodeur</h2>
+  <h2><span class="icon">⚡</span> <?php esc_html_e('Encodeur / Décodeur', 'scout-codes'); ?></h2>
 
   <div class="dir-toggle">
-    <button class="active" onclick="setDir('encode',this)">Texte → Code téléphone</button>
-    <button onclick="setDir('decode',this)">Code → Texte</button>
+    <button class="active" onclick="setDir('encode',this)"><?php esc_html_e('Texte → Code téléphone', 'scout-codes'); ?></button>
+    <button onclick="setDir('decode',this)"><?php esc_html_e('Code → Texte', 'scout-codes'); ?></button>
   </div>
 
   <div class="encoder-input">
-    <textarea id="inputText" placeholder="Tapez votre message ici..." oninput="convert()"></textarea>
+    <textarea id="inputText" placeholder="<?php echo esc_attr__('Tapez votre message ici...', 'scout-codes'); ?>" oninput="convert()"></textarea>
   </div>
   <div class="btn-row">
-    <button class="btn btn-g" onclick="convert()">Convertir</button>
-    <button class="btn btn-o" onclick="clearAll()">Effacer</button>
-    <button class="btn btn-o" onclick="copyOutput()">📋 Copier</button>
+    <button class="btn btn-g" onclick="convert()"><?php esc_html_e('Convertir', 'scout-codes'); ?></button>
+    <button class="btn btn-o" onclick="clearAll()"><?php esc_html_e('Effacer', 'scout-codes'); ?></button>
+    <button class="btn btn-o" onclick="copyOutput()">📋 <?php esc_html_e('Copier', 'scout-codes'); ?></button>
   </div>
 
-  <div class="output-label" id="outLabel">CODE TÉLÉPHONE</div>
+  <div class="output-label" id="outLabel"><?php esc_html_e('CODE TÉLÉPHONE', 'scout-codes'); ?></div>
   <div class="output-box" id="output"></div>
 </div>
 </div>
 
 
 
+<script>var scL10n = <?php echo wp_json_encode([
+  'tapezMessage' => __('Tapez votre message ici...', 'scout-codes'),
+  'entrezCode' => __('Entrez le code (ex: 2³ 2¹ 6¹ 7¹ ou 23 21 61 71)...', 'scout-codes'),
+  'codeTelephone' => __('CODE TÉLÉPHONE', 'scout-codes'),
+  'texte' => __('TEXTE', 'scout-codes'),
+  'copie' => __('Copié!', 'scout-codes'),
+  'copier' => __('Copier', 'scout-codes'),
+  'touche' => __('touche', 'scout-codes'),
+  'position' => __('position', 'scout-codes'),
+]); ?>;</script>
 <script>
 // Phone keypad layout (matching the book: no Q on 7, no Z on 9)
 const KEYS = [
@@ -137,9 +147,9 @@ function setDir(d, btn) {
   document.querySelectorAll('.dir-toggle button').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   document.getElementById('inputText').placeholder = d === 'encode'
-    ? 'Tapez votre message ici...'
-    : 'Entrez le code (ex: 2³ 2¹ 6¹ 7¹ ou 23 21 61 71)...';
-  document.getElementById('outLabel').textContent = d === 'encode' ? 'CODE TÉLÉPHONE' : 'TEXTE';
+    ? scL10n.tapezMessage
+    : scL10n.entrezCode;
+  document.getElementById('outLabel').textContent = d === 'encode' ? scL10n.codeTelephone : scL10n.texte;
   convert();
 }
 
@@ -184,8 +194,8 @@ function convert() {
 function clearAll() { document.getElementById('inputText').value = ''; document.getElementById('output').textContent = ''; }
 function copyOutput() {
   navigator.clipboard.writeText(document.getElementById('output').textContent).then(() => {
-    event.target.textContent = '✅ Copié!';
-    setTimeout(() => event.target.textContent = '📋 Copier', 1500);
+    event.target.textContent = '✅ ' + scL10n.copie;
+    setTimeout(() => event.target.textContent = '📋 ' + scL10n.copier, 1500);
   });
 }
 
@@ -220,7 +230,7 @@ function addLetter(ch) {
   convert();
   // Show on phone screen
   const screen = document.getElementById('phoneScreen');
-  screen.innerHTML = `<span style="color:#6f6">${ch} = ${info.key}<sup>${info.pos}</sup></span><div class="sub">touche ${info.key}, position ${info.pos}</div>`;
+  screen.innerHTML = `<span style="color:#6f6">${ch} = ${info.key}<sup>${info.pos}</sup></span><div class="sub">${scL10n.touche} ${info.key}, ${scL10n.position} ${info.pos}</div>`;
 }
 
 buildKeypad();

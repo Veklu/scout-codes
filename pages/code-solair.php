@@ -22,24 +22,24 @@ body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--txt)}
 </div>
 <div class="container">
 <div class="card">
-  <h2>Symboles d'urgence</h2>
-  <p class="desc">Ces symboles servent à communiquer avec un avion de secours depuis le sol. Ils doivent être tracés au sol avec des matériaux visibles (branches, pierres, tissu, neige) et mesurer au minimum <strong>2.5 mètres (8 pieds)</strong> de longueur.</p>
+  <h2><?php esc_html_e('Symboles d\'urgence', 'scout-codes'); ?></h2>
+  <p class="desc"><?php echo wp_kses(__('Ces symboles servent à communiquer avec un avion de secours depuis le sol. Ils doivent être tracés au sol avec des matériaux visibles (branches, pierres, tissu, neige) et mesurer au minimum <strong>2.5 mètres (8 pieds)</strong> de longueur.', 'scout-codes'), ['strong' => []]); ?></p>
 
   <div class="solair-grid">
-    <div class="solair-card"><div class="sym">I</div><div class="sym-name">Besoin de médicaments</div><div class="sym-desc">1 trait vertical</div></div>
-    <div class="solair-card"><div class="sym">I I</div><div class="sym-name">Incapable de poursuivre</div><div class="sym-desc">2 traits verticaux</div></div>
-    <div class="solair-card"><div class="sym">X</div><div class="sym-name">Besoin de carte et boussole</div><div class="sym-desc">Croix en X</div></div>
-    <div class="solair-card"><div class="sym">F</div><div class="sym-name">Besoin d'eau et nourriture</div><div class="sym-desc">Lettre F</div></div>
-    <div class="solair-card"><div class="sym">□</div><div class="sym-name">Besoin de réparation</div><div class="sym-desc">Carré / lettre W</div></div>
-    <div class="solair-card"><div class="sym">L</div><div class="sym-name">Besoin de carburant et huile</div><div class="sym-desc">Lettre L</div></div>
-    <div class="solair-card"><div class="sym">→</div><div class="sym-name">Voyage dans cette direction</div><div class="sym-desc">Flèche directionnelle</div></div>
-    <div class="solair-card"><div class="sym">N</div><div class="sym-name">Non / négatif</div><div class="sym-desc">Lettre N</div></div>
-    <div class="solair-card"><div class="sym">Y</div><div class="sym-name">Oui / affirmatif</div><div class="sym-desc">Lettre Y</div></div>
-    <div class="solair-card"><div class="sym">LL</div><div class="sym-name">Tout va bien</div><div class="sym-desc">Deux L</div></div>
+    <div class="solair-card"><div class="sym">I</div><div class="sym-name"><?php esc_html_e('Besoin de médicaments', 'scout-codes'); ?></div><div class="sym-desc"><?php esc_html_e('1 trait vertical', 'scout-codes'); ?></div></div>
+    <div class="solair-card"><div class="sym">I I</div><div class="sym-name"><?php esc_html_e('Incapable de poursuivre', 'scout-codes'); ?></div><div class="sym-desc"><?php esc_html_e('2 traits verticaux', 'scout-codes'); ?></div></div>
+    <div class="solair-card"><div class="sym">X</div><div class="sym-name"><?php esc_html_e('Besoin de carte et boussole', 'scout-codes'); ?></div><div class="sym-desc"><?php esc_html_e('Croix en X', 'scout-codes'); ?></div></div>
+    <div class="solair-card"><div class="sym">F</div><div class="sym-name"><?php esc_html_e('Besoin d\'eau et nourriture', 'scout-codes'); ?></div><div class="sym-desc"><?php esc_html_e('Lettre F', 'scout-codes'); ?></div></div>
+    <div class="solair-card"><div class="sym">□</div><div class="sym-name"><?php esc_html_e('Besoin de réparation', 'scout-codes'); ?></div><div class="sym-desc"><?php esc_html_e('Carré / lettre W', 'scout-codes'); ?></div></div>
+    <div class="solair-card"><div class="sym">L</div><div class="sym-name"><?php esc_html_e('Besoin de carburant et huile', 'scout-codes'); ?></div><div class="sym-desc"><?php esc_html_e('Lettre L', 'scout-codes'); ?></div></div>
+    <div class="solair-card"><div class="sym">→</div><div class="sym-name"><?php esc_html_e('Voyage dans cette direction', 'scout-codes'); ?></div><div class="sym-desc"><?php esc_html_e('Flèche directionnelle', 'scout-codes'); ?></div></div>
+    <div class="solair-card"><div class="sym">N</div><div class="sym-name"><?php esc_html_e('Non / négatif', 'scout-codes'); ?></div><div class="sym-desc"><?php esc_html_e('Lettre N', 'scout-codes'); ?></div></div>
+    <div class="solair-card"><div class="sym">Y</div><div class="sym-name"><?php esc_html_e('Oui / affirmatif', 'scout-codes'); ?></div><div class="sym-desc"><?php esc_html_e('Lettre Y', 'scout-codes'); ?></div></div>
+    <div class="solair-card"><div class="sym">LL</div><div class="sym-name"><?php esc_html_e('Tout va bien', 'scout-codes'); ?></div><div class="sym-desc"><?php esc_html_e('Deux L', 'scout-codes'); ?></div></div>
   </div>
 
   <div class="warning">
-    <strong>⚠️ Important :</strong> Ces symboles doivent être <strong>très grands</strong> (minimum 2.5m) pour être vus du ciel. Utilisez un contraste fort avec le terrain environnant. Des branches sombres sur neige blanche, ou des pierres claires sur terre foncée, fonctionnent le mieux.
+    <strong>⚠️ <?php esc_html_e('Important :', 'scout-codes'); ?></strong> <?php echo wp_kses(__('Ces symboles doivent être <strong>très grands</strong> (minimum 2.5m) pour être vus du ciel. Utilisez un contraste fort avec le terrain environnant. Des branches sombres sur neige blanche, ou des pierres claires sur terre foncée, fonctionnent le mieux.', 'scout-codes'), ['strong' => []]); ?>
   </div>
 </div>
 </div>

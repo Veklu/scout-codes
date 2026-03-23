@@ -56,40 +56,40 @@ body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--txt)}
 <div class="container">
 
 <div class="card">
-  <h2><span class="icon">🔢</span> Le principe</h2>
-  <p class="desc">Chaque lettre est remplacée par son numéro dans l'alphabet. On peut aussi utiliser les <strong>chiffres romains</strong> pour rendre le code plus difficile à décoder. Cliquez sur une lettre pour l'ajouter à votre message!</p>
+  <h2><span class="icon">🔢</span> <?php esc_html_e('Le principe', 'scout-codes'); ?></h2>
+  <p class="desc"><?php echo wp_kses(__('Chaque lettre est remplacée par son numéro dans l\'alphabet. On peut aussi utiliser les <strong>chiffres romains</strong> pour rendre le code plus difficile à décoder. Cliquez sur une lettre pour l\'ajouter à votre message!', 'scout-codes'), ['strong' => []]); ?></p>
   <div class="alpha-grid" id="alphaGrid"></div>
 </div>
 
 <!-- ENCODER -->
 <div class="card">
-  <h2><span class="icon">⚡</span> Encodeur / Décodeur</h2>
+  <h2><span class="icon">⚡</span> <?php esc_html_e('Encodeur / Décodeur', 'scout-codes'); ?></h2>
 
   <div class="dir-toggle">
-    <button class="active" onclick="setDir('encode',this)">Texte → Chiffres</button>
-    <button onclick="setDir('decode',this)">Chiffres → Texte</button>
+    <button class="active" onclick="setDir('encode',this)"><?php esc_html_e('Texte → Chiffres', 'scout-codes'); ?></button>
+    <button onclick="setDir('decode',this)"><?php esc_html_e('Chiffres → Texte', 'scout-codes'); ?></button>
   </div>
 
   <div class="mode-toggle">
-    <button class="active" onclick="setMode('num',this)">Chiffres (1-26)</button>
-    <button onclick="setMode('roman',this)">Chiffres romains</button>
+    <button class="active" onclick="setMode('num',this)"><?php esc_html_e('Chiffres (1-26)', 'scout-codes'); ?></button>
+    <button onclick="setMode('roman',this)"><?php esc_html_e('Chiffres romains', 'scout-codes'); ?></button>
   </div>
 
   <div class="encoder-input">
-    <textarea id="inputText" placeholder="Tapez votre message ici..." oninput="convert()"></textarea>
+    <textarea id="inputText" placeholder="<?php echo esc_attr__('Tapez votre message ici...', 'scout-codes'); ?>" oninput="convert()"></textarea>
   </div>
   <div class="btn-row">
-    <button class="btn btn-g" onclick="convert()">Convertir</button>
-    <button class="btn btn-o" onclick="clearAll()">Effacer</button>
-    <button class="btn btn-o" onclick="copyOutput()">📋 Copier</button>
+    <button class="btn btn-g" onclick="convert()"><?php esc_html_e('Convertir', 'scout-codes'); ?></button>
+    <button class="btn btn-o" onclick="clearAll()"><?php esc_html_e('Effacer', 'scout-codes'); ?></button>
+    <button class="btn btn-o" onclick="copyOutput()">📋 <?php esc_html_e('Copier', 'scout-codes'); ?></button>
   </div>
 
-  <div class="output-label" id="outLabel">CHIFFRES</div>
+  <div class="output-label" id="outLabel"><?php esc_html_e('CHIFFRES', 'scout-codes'); ?></div>
   <div class="output-box" id="output"></div>
 
   <div class="roman-info">
-    <h3>Chiffres romains — aide-mémoire</h3>
-    <p style="font-size:0.85rem;color:var(--soft);margin-bottom:10px">Les unités de base : I=1, V=5, X=10, L=50, C=100, D=500, M=1000. Les plus grosses unités sont placées au début. Si une unité plus petite est placée devant une plus grosse, on la soustrait.</p>
+    <h3><?php esc_html_e('Chiffres romains — aide-mémoire', 'scout-codes'); ?></h3>
+    <p style="font-size:0.85rem;color:var(--soft);margin-bottom:10px"><?php esc_html_e('Les unités de base : I=1, V=5, X=10, L=50, C=100, D=500, M=1000. Les plus grosses unités sont placées au début. Si une unité plus petite est placée devant une plus grosse, on la soustrait.', 'scout-codes'); ?></p>
     <div class="roman-table">
       <div class="roman-item"><div class="val">I</div><div class="eq">= 1</div></div>
       <div class="roman-item"><div class="val">V</div><div class="eq">= 5</div></div>
@@ -106,6 +106,15 @@ body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--txt)}
 
 
 
+<script>var scL10n = <?php echo wp_json_encode([
+  'tapezMessage' => __('Tapez votre message ici...', 'scout-codes'),
+  'entrezChiffres' => __('Entrez les chiffres séparés par des espaces (ex: 1 12 5 24)...', 'scout-codes'),
+  'chiffresRomains' => __('CHIFFRES ROMAINS', 'scout-codes'),
+  'chiffres' => __('CHIFFRES', 'scout-codes'),
+  'texte' => __('TEXTE', 'scout-codes'),
+  'copie' => __('Copié!', 'scout-codes'),
+  'copier' => __('Copier', 'scout-codes'),
+]); ?>;</script>
 <script>
 let mode='num', dir='encode';
 
@@ -121,8 +130,8 @@ function fromRoman(s){
 
 function setMode(m,btn){mode=m;document.querySelectorAll('.mode-toggle button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');convert()}
 function setDir(d,btn){dir=d;document.querySelectorAll('.dir-toggle button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
-  document.getElementById('inputText').placeholder=d==='encode'?'Tapez votre message ici...':'Entrez les chiffres séparés par des espaces (ex: 1 12 5 24)...';
-  document.getElementById('outLabel').textContent=d==='encode'?(mode==='roman'?'CHIFFRES ROMAINS':'CHIFFRES'):'TEXTE';
+  document.getElementById('inputText').placeholder=d==='encode'?scL10n.tapezMessage:scL10n.entrezChiffres;
+  document.getElementById('outLabel').textContent=d==='encode'?(mode==='roman'?scL10n.chiffresRomains:scL10n.chiffres):scL10n.texte;
   convert();
 }
 
@@ -156,7 +165,7 @@ function convert(){
 }
 
 function clearAll(){document.getElementById('inputText').value='';document.getElementById('output').textContent=''}
-function copyOutput(){navigator.clipboard.writeText(document.getElementById('output').textContent).then(()=>{event.target.textContent='✅ Copié!';setTimeout(()=>event.target.textContent='📋 Copier',1500)})}
+function copyOutput(){navigator.clipboard.writeText(document.getElementById('output').textContent).then(()=>{event.target.textContent='✅ '+scL10n.copie;setTimeout(()=>event.target.textContent='📋 '+scL10n.copier,1500)})}
 
 // Build grid
 const grid=document.getElementById('alphaGrid');

@@ -75,16 +75,16 @@ body{font-family:'Nunito',sans-serif;background:#f0efe8;color:var(--txt)}
 <div class="container">
 
 <div class="card">
-  <h2>Comment ça marche?</h2>
-  <p class="desc">On dessine une grille de tic-tac-toc (3×3 = 9 cases). Chaque case est <strong>divisée en 3 sections verticales</strong>. Les lettres remplissent les sections de gauche à droite, case par case : A B C dans la case 1, D E F dans la case 2, etc. La case 9 ne contient que Y et Z.<br><br>
-  Le symbole = la <strong>forme de la case</strong> (ses bords dans la grille #) + un <strong>point positionné</strong> dans la bonne section (gauche, centre ou droite). C'est la <strong>position du point</strong> qui identifie la lettre!</p>
+  <h2><?php esc_html_e('Comment ça marche?', 'scout-codes'); ?></h2>
+  <p class="desc"><?php echo wp_kses(__('On dessine une grille de tic-tac-toc (3×3 = 9 cases). Chaque case est <strong>divisée en 3 sections verticales</strong>. Les lettres remplissent les sections de gauche à droite, case par case : A B C dans la case 1, D E F dans la case 2, etc. La case 9 ne contient que Y et Z.', 'scout-codes'), ['strong' => []]); ?><br><br>
+  <?php echo wp_kses(__('Le symbole = la <strong>forme de la case</strong> (ses bords dans la grille #) + un <strong>point positionné</strong> dans la bonne section (gauche, centre ou droite). C\'est la <strong>position du point</strong> qui identifie la lettre!', 'scout-codes'), ['strong' => []]); ?></p>
 
   <div class="legend">
-    <strong>🔑 La position du point est la clé :</strong> Le point est placé à gauche (1re lettre), au centre (2e lettre), ou à droite (3e lettre) à l'intérieur de la forme de la case. Un point centré ne signifie PAS la même chose qu'un point à gauche!
+    <strong>🔑 <?php esc_html_e('La position du point est la clé :', 'scout-codes'); ?></strong> <?php esc_html_e('Le point est placé à gauche (1re lettre), au centre (2e lettre), ou à droite (3e lettre) à l\'intérieur de la forme de la case. Un point centré ne signifie PAS la même chose qu\'un point à gauche!', 'scout-codes'); ?>
   </div>
 
   <div class="chalkboard">
-    <div class="chalk-title">✏️ Cliquez sur une lettre</div>
+    <div class="chalk-title">✏️ <?php esc_html_e('Cliquez sur une lettre', 'scout-codes'); ?></div>
     <div class="board-container">
       <div class="hash-lines">
         <div class="hline v1"></div><div class="hline v2"></div>
@@ -95,27 +95,27 @@ body{font-family:'Nunito',sans-serif;background:#f0efe8;color:var(--txt)}
   </div>
 
   <div class="example">
-    <h3>📝 Exemple: MIEUX</h3>
-    <p style="font-size:0.9rem;color:var(--soft)">M = case 5, point à gauche · I = case 3, point à droite · E = case 2, point au centre · U = case 7, point à droite · X = case 8, point à droite</p>
+    <h3>📝 <?php esc_html_e('Exemple: MIEUX', 'scout-codes'); ?></h3>
+    <p style="font-size:0.9rem;color:var(--soft)"><?php esc_html_e('M = case 5, point à gauche · I = case 3, point à droite · E = case 2, point au centre · U = case 7, point à droite · X = case 8, point à droite', 'scout-codes'); ?></p>
     <div class="example-row" id="exampleRow"></div>
   </div>
 </div>
 
 <div class="card">
-  <h2>✏️ Créez votre message secret</h2>
-  <p class="desc">Tapez du texte ou cliquez sur les lettres du tableau / alphabet ci-dessous.</p>
+  <h2>✏️ <?php esc_html_e('Créez votre message secret', 'scout-codes'); ?></h2>
+  <p class="desc"><?php esc_html_e('Tapez du texte ou cliquez sur les lettres du tableau / alphabet ci-dessous.', 'scout-codes'); ?></p>
   <div class="encoder-input">
-    <textarea id="inputText" placeholder="Tapez votre message ici..." oninput="encode()"></textarea>
+    <textarea id="inputText" placeholder="<?php echo esc_attr__('Tapez votre message ici...', 'scout-codes'); ?>" oninput="encode()"></textarea>
   </div>
   <div class="btn-row">
-    <button class="btn btn-g" onclick="encode()">Encoder</button>
-    <button class="btn btn-o" onclick="clearAll()">Effacer</button>
-    <button class="btn btn-o" onclick="downloadSVG()">📥 Télécharger SVG</button>
+    <button class="btn btn-g" onclick="encode()"><?php esc_html_e('Encoder', 'scout-codes'); ?></button>
+    <button class="btn btn-o" onclick="clearAll()"><?php esc_html_e('Effacer', 'scout-codes'); ?></button>
+    <button class="btn btn-o" onclick="downloadSVG()">📥 <?php esc_html_e('Télécharger SVG', 'scout-codes'); ?></button>
   </div>
-  <div class="output-label">MESSAGE ENCODÉ</div>
-  <div class="output-area" id="output"><div class="placeholder">Votre message apparaîtra ici en symboles...</div></div>
+  <div class="output-label"><?php esc_html_e('MESSAGE ENCODÉ', 'scout-codes'); ?></div>
+  <div class="output-area" id="output"><div class="placeholder"><?php esc_html_e('Votre message apparaîtra ici en symboles...', 'scout-codes'); ?></div></div>
   <div style="margin-top:20px">
-    <div class="output-label">CLIQUEZ POUR AJOUTER</div>
+    <div class="output-label"><?php esc_html_e('CLIQUEZ POUR AJOUTER', 'scout-codes'); ?></div>
     <div class="alpha-small" id="alphaGrid"></div>
   </div>
 </div>
@@ -123,6 +123,15 @@ body{font-family:'Nunito',sans-serif;background:#f0efe8;color:var(--txt)}
 
 
 
+<script>var scL10n = <?php echo wp_json_encode([
+  'messageApparaitra' => __('Votre message apparaîtra ici en symboles...', 'scout-codes'),
+  'gauche' => __('gauche', 'scout-codes'),
+  'centre' => __('centre', 'scout-codes'),
+  'droite' => __('droite', 'scout-codes'),
+  'case' => __('case', 'scout-codes'),
+  'point' => __('point', 'scout-codes'),
+  'pt' => __('pt', 'scout-codes'),
+]); ?>;</script>
 <script>
 const GRID=[['A','B','C'],['D','E','F'],['G','H','I'],['J','K','L'],['M','N','O'],['P','Q','R'],['S','T','U'],['V','W','X'],['Y','Z','']];
 const L={};
@@ -130,7 +139,7 @@ GRID.forEach((cell,idx)=>{const row=Math.floor(idx/3),col=idx%3;cell.forEach((l,
 
 function getWalls(r,c){return{top:r>0,bottom:r<2,left:c>0,right:c<2}}
 
-const SEC_LABELS=['gauche','centre','droite'];
+const SEC_LABELS=[scL10n.gauche,scL10n.centre,scL10n.droite];
 
 function drawSymbol(letter,size){
   const info=L[letter.toUpperCase()];if(!info)return'';
@@ -164,7 +173,7 @@ function buildBoard(){
       t.className='third'+(letter?'':' empty-slot');
       t.textContent=letter||'';
       const sn=document.createElement('span');sn.className='sec-num';sn.textContent='·';t.appendChild(sn);
-      if(letter){t.onclick=()=>addLetter(letter);t.title=`${letter} → case ${idx+1}, point ${SEC_LABELS[sec]}`}
+      if(letter){t.onclick=()=>addLetter(letter);t.title=`${letter} → ${scL10n.case} ${idx+1}, ${scL10n.point} ${SEC_LABELS[sec]}`}
       div.appendChild(t);
     });
     board.appendChild(div);
@@ -188,7 +197,7 @@ function addLetter(ch){document.getElementById('inputText').value+=ch;encode()}
 
 function encode(){
   const input=document.getElementById('inputText').value.toUpperCase(),o=document.getElementById('output');
-  if(!input.trim()){o.innerHTML='<div class="placeholder">Votre message apparaîtra ici en symboles...</div>';o.classList.remove('active');return}
+  if(!input.trim()){o.innerHTML='<div class="placeholder">'+scL10n.messageApparaitra+'</div>';o.classList.remove('active');return}
   o.classList.add('active');let html='';
   for(const ch of input){
     if(ch===' ')html+='<div class="word-gap"></div>';
@@ -197,7 +206,7 @@ function encode(){
   o.innerHTML=html;
 }
 
-function clearAll(){document.getElementById('inputText').value='';const o=document.getElementById('output');o.innerHTML='<div class="placeholder">Votre message apparaîtra ici en symboles...</div>';o.classList.remove('active')}
+function clearAll(){document.getElementById('inputText').value='';const o=document.getElementById('output');o.innerHTML='<div class="placeholder">'+scL10n.messageApparaitra+'</div>';o.classList.remove('active')}
 
 function downloadSVG(){
   const svgs=document.getElementById('output').querySelectorAll('svg');if(!svgs.length)return;
@@ -210,7 +219,7 @@ function buildExample(){
   const row=document.getElementById('exampleRow');
   'MIEUX'.split('').forEach(ch=>{
     const info=L[ch];
-    row.innerHTML+=`<div class="sym-wrap">${drawSymbol(ch,54)}<div style="font-size:12px;color:var(--muted);font-weight:700">${ch}</div><div style="font-size:9px;color:var(--gold)">case ${info.cellIdx+1}, pt ${SEC_LABELS[info.section]}</div></div>`;
+    row.innerHTML+=`<div class="sym-wrap">${drawSymbol(ch,54)}<div style="font-size:12px;color:var(--muted);font-weight:700">${ch}</div><div style="font-size:9px;color:var(--gold)">${scL10n.case} ${info.cellIdx+1}, ${scL10n.pt} ${SEC_LABELS[info.section]}</div></div>`;
   });
 }
 
